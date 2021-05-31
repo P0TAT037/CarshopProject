@@ -36,8 +36,8 @@ namespace Project
             this.showPassword = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.signUp = new System.Windows.Forms.Label();
-            this.signInBtn = new ePOSOne.btnProduct.Button_WOC();
             this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
+            this.signInBtn = new ePOSOne.btnProduct.Button_WOC();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,6 +62,7 @@ namespace Project
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(37, 193);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 26);
@@ -72,6 +73,7 @@ namespace Project
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(43, 264);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 26);
@@ -81,6 +83,7 @@ namespace Project
             // showPassword
             // 
             this.showPassword.AutoSize = true;
+            this.showPassword.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.showPassword.Location = new System.Drawing.Point(205, 331);
             this.showPassword.Name = "showPassword";
             this.showPassword.Size = new System.Drawing.Size(124, 21);
@@ -93,6 +96,7 @@ namespace Project
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Location = new System.Drawing.Point(60, 369);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(185, 21);
@@ -113,25 +117,6 @@ namespace Project
             this.signUp.MouseLeave += new System.EventHandler(this.signUp_MouseLeave);
             this.signUp.MouseHover += new System.EventHandler(this.signUp_MouseHover);
             // 
-            // signInBtn
-            // 
-            this.signInBtn.BorderColor = System.Drawing.Color.Transparent;
-            this.signInBtn.ButtonColor = System.Drawing.Color.DeepSkyBlue;
-            this.signInBtn.FlatAppearance.BorderSize = 0;
-            this.signInBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signInBtn.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signInBtn.Location = new System.Drawing.Point(91, 413);
-            this.signInBtn.Name = "signInBtn";
-            this.signInBtn.OnHoverBorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.signInBtn.OnHoverButtonColor = System.Drawing.Color.MintCream;
-            this.signInBtn.OnHoverTextColor = System.Drawing.Color.DeepSkyBlue;
-            this.signInBtn.Size = new System.Drawing.Size(186, 72);
-            this.signInBtn.TabIndex = 9;
-            this.signInBtn.Text = "Sign in";
-            this.signInBtn.TextColor = System.Drawing.Color.White;
-            this.signInBtn.UseVisualStyleBackColor = true;
-            this.signInBtn.Click += new System.EventHandler(this.signInBtn_Click);
-            // 
             // button_WOC1
             // 
             this.button_WOC1.BorderColor = System.Drawing.Color.Transparent;
@@ -151,6 +136,25 @@ namespace Project
             this.button_WOC1.UseVisualStyleBackColor = true;
             this.button_WOC1.Click += new System.EventHandler(this.button_WOC1_Click);
             // 
+            // signInBtn
+            // 
+            this.signInBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.signInBtn.ButtonColor = System.Drawing.Color.DeepSkyBlue;
+            this.signInBtn.FlatAppearance.BorderSize = 0;
+            this.signInBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signInBtn.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signInBtn.Location = new System.Drawing.Point(91, 413);
+            this.signInBtn.Name = "signInBtn";
+            this.signInBtn.OnHoverBorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.signInBtn.OnHoverButtonColor = System.Drawing.Color.MintCream;
+            this.signInBtn.OnHoverTextColor = System.Drawing.Color.DeepSkyBlue;
+            this.signInBtn.Size = new System.Drawing.Size(186, 72);
+            this.signInBtn.TabIndex = 9;
+            this.signInBtn.Text = "Sign in";
+            this.signInBtn.TextColor = System.Drawing.Color.White;
+            this.signInBtn.UseVisualStyleBackColor = true;
+            this.signInBtn.Click += new System.EventHandler(this.signInBtn_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Project.Properties.Resources.paeto;
@@ -165,6 +169,7 @@ namespace Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(378, 551);
             this.Controls.Add(this.button_WOC1);
             this.Controls.Add(this.signInBtn);
