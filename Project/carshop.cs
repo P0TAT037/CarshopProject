@@ -16,5 +16,12 @@ namespace Project
         {
             InitializeComponent();
         }
+
+        private void LogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            SignIn signIn = new SignIn();
+            signIn.Show();
+        }
     }
 }

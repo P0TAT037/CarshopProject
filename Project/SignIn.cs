@@ -28,9 +28,9 @@ namespace Project
 
         private void signUp_Click(object sender, EventArgs e)
         {
-            signUp.ForeColor = Color.White;
+            
             SignUp.Show();
-            this.Visible = false;
+            this.Close();
         }
 
         private void signUp_MouseHover(object sender, EventArgs e)
@@ -47,6 +47,9 @@ namespace Project
         {
             if(true)
             {
+                carshop carshop = new carshop();
+                carshop.Show();
+                this.Visible = false;
 
             }
             else
@@ -57,7 +60,8 @@ namespace Project
         
         private void button_WOC1_Click(object sender, EventArgs e)
         {
-            this.Close();
+
+            Application.Exit();
         }
 
         

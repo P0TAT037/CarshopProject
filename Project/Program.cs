@@ -16,7 +16,9 @@ namespace Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SignIn());
+            SignIn signIn = new SignIn();
+            signIn.Show();
+            Application.Run();
         }
     }
 }
