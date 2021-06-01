@@ -22,3 +22,15 @@ C:\Users\samir\Desktop\New folder (3)\New folder\ProjectII\Project\obj\Debug\Pro
 C:\Users\samir\Desktop\New folder (3)\New folder\ProjectII\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
 C:\Users\samir\Desktop\New folder (3)\New folder\ProjectII\Project\obj\Debug\Project.exe
 C:\Users\samir\Desktop\New folder (3)\New folder\ProjectII\Project\obj\Debug\Project.pdb
+C:\Users\lolor\Source\Repos\ProjectII\Project\bin\Debug\Project.exe.config
+C:\Users\lolor\Source\Repos\ProjectII\Project\bin\Debug\Project.exe
+C:\Users\lolor\Source\Repos\ProjectII\Project\bin\Debug\Project.pdb
+C:\Users\lolor\Source\Repos\ProjectII\Project\obj\Debug\Project.carshop.resources
+C:\Users\lolor\Source\Repos\ProjectII\Project\obj\Debug\Project.SignIn.resources
+C:\Users\lolor\Source\Repos\ProjectII\Project\obj\Debug\Project.Properties.Resources.resources
+C:\Users\lolor\Source\Repos\ProjectII\Project\obj\Debug\Project.SignUp.resources
+C:\Users\lolor\Source\Repos\ProjectII\Project\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Users\lolor\Source\Repos\ProjectII\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Users\lolor\Source\Repos\ProjectII\Project\obj\Debug\Project.exe
+C:\Users\lolor\Source\Repos\ProjectII\Project\obj\Debug\Project.pdb
+C:\Users\lolor\Source\Repos\ProjectII\Project\obj\Debug\Project.Manage.resources

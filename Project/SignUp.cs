@@ -18,11 +18,13 @@ namespace Project
         {
             InitializeComponent();
             password.UseSystemPasswordChar = true;
+            confirm.UseSystemPasswordChar = true;
         }
 
         private void showPassword_CheckedChanged(object sender, EventArgs e)
         {
             methods.showPasswordCheck(password, showPassword);
+            methods.showPasswordCheck(confirm, showPassword);
         }
 
         private void cancel_Click(object sender, EventArgs e)
@@ -30,6 +32,20 @@ namespace Project
             this.Close();
             SignIn SignIn = new SignIn();
             SignIn.Show();
+        }
+
+        private void signUnBtn_Click(object sender, EventArgs e)
+        {
+            if (password.Text == confirm.Text)
+            {
+                carshop carshop = new carshop();
+                carshop.Show();
+                this.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Passwords don't match.");
+            }
         }
     }
 }

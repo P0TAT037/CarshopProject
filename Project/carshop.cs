@@ -23,5 +23,16 @@ namespace Project
             SignIn signIn = new SignIn();
             signIn.Show();
         }
+
+        private void manage_Click(object sender, EventArgs e)
+        {
+            if (true)
+            {
+                Manage Manage = new Manage();
+                Manage.Show();
+                this.Visible = false;
+
+            }
+        }
     }
 }

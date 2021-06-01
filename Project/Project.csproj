@@ -55,6 +55,12 @@
     <Compile Include="carshop.Designer.cs">
       <DependentUpon>carshop.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage.Designer.cs">
+      <DependentUpon>Manage.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     </Compile>
     <EmbeddedResource Include="carshop.resx">
       <DependentUpon>carshop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage.resx">
+      <DependentUpon>Manage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>
