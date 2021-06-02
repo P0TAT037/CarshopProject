@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace Project
 {
+    
     public partial class SignIn : Form
     {
+        public static string userName;
         SignUp SignUp = new SignUp();
         public SignIn()
         {
@@ -45,11 +47,12 @@ namespace Project
         
         private void signInBtn_Click(object sender, EventArgs e)
         {
-            if(true)
+            userName = username.Text;
+            if(accountsTableAdapter.getPassword(userName) == password.Text)
             {
                 carshop carshop = new carshop();
                 carshop.Show();
-                this.Visible = false;
+                this.Close();
 
             }
             else
@@ -58,13 +61,25 @@ namespace Project
             }
         }
         
-        private void button_WOC1_Click(object sender, EventArgs e)
+        private void exit_Click(object sender, EventArgs e)
         {
-
             Application.Exit();
         }
 
-        
+        private void accountsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.accountsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dataSet);
+
+        }
+
+        private void SignIn_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dataSet.Accounts' table. You can move, or remove it, as needed.
+            this.accountsTableAdapter.Fill(this.dataSet.Accounts);
+
+        }
     }
 
     class methods

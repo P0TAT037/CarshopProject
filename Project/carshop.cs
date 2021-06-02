@@ -26,13 +26,38 @@ namespace Project
 
         private void manage_Click(object sender, EventArgs e)
         {
-            if (true)
-            {
+            
                 Manage Manage = new Manage();
                 Manage.Show();
-                this.Visible = false;
+                this.Close();
 
+            
+        }
+
+        private void carshop_Load(object sender, EventArgs e)
+        {
+            
+            // TODO: This line of code loads data into the 'dataSet.Accounts' table. You can move, or remove it, as needed.
+            this.accountsTableAdapter.Fill(this.dataSet.Accounts);
+            name.Text = accountsTableAdapter.getName(SignIn.userName);
+            bool admin = (bool)accountsTableAdapter.checkAdmin(SignIn.userName);
+            if(admin)
+            {
+                manage.Visible = true;
             }
+        }
+
+        private void accountsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.accountsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dataSet);
+
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

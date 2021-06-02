@@ -29,6 +29,7 @@ namespace Project
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.username = new System.Windows.Forms.TextBox();
             this.password = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,10 +37,16 @@ namespace Project
             this.showPassword = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.signUp = new System.Windows.Forms.Label();
-            this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
-            this.signInBtn = new ePOSOne.btnProduct.Button_WOC();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.exit = new ePOSOne.btnProduct.Button_WOC();
+            this.signInBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.dataSet = new Project.DataSet();
+            this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.accountsTableAdapter = new Project.DataSetTableAdapters.AccountsTableAdapter();
+            this.tableAdapterManager = new Project.DataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // username
@@ -117,24 +124,34 @@ namespace Project
             this.signUp.MouseLeave += new System.EventHandler(this.signUp_MouseLeave);
             this.signUp.MouseHover += new System.EventHandler(this.signUp_MouseHover);
             // 
-            // button_WOC1
+            // pictureBox1
             // 
-            this.button_WOC1.BorderColor = System.Drawing.Color.Transparent;
-            this.button_WOC1.ButtonColor = System.Drawing.Color.Red;
-            this.button_WOC1.FlatAppearance.BorderSize = 0;
-            this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_WOC1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_WOC1.Location = new System.Drawing.Point(124, 491);
-            this.button_WOC1.Name = "button_WOC1";
-            this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.Red;
-            this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.MintCream;
-            this.button_WOC1.OnHoverTextColor = System.Drawing.Color.Red;
-            this.button_WOC1.Size = new System.Drawing.Size(111, 50);
-            this.button_WOC1.TabIndex = 10;
-            this.button_WOC1.Text = "Exit";
-            this.button_WOC1.TextColor = System.Drawing.Color.White;
-            this.button_WOC1.UseVisualStyleBackColor = true;
-            this.button_WOC1.Click += new System.EventHandler(this.button_WOC1_Click);
+            this.pictureBox1.Image = global::Project.Properties.Resources.paeto;
+            this.pictureBox1.Location = new System.Drawing.Point(80, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(222, 187);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            // 
+            // exit
+            // 
+            this.exit.BorderColor = System.Drawing.Color.Transparent;
+            this.exit.ButtonColor = System.Drawing.Color.Red;
+            this.exit.FlatAppearance.BorderSize = 0;
+            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exit.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exit.Location = new System.Drawing.Point(124, 491);
+            this.exit.Name = "exit";
+            this.exit.OnHoverBorderColor = System.Drawing.Color.Red;
+            this.exit.OnHoverButtonColor = System.Drawing.Color.MintCream;
+            this.exit.OnHoverTextColor = System.Drawing.Color.Red;
+            this.exit.Size = new System.Drawing.Size(111, 50);
+            this.exit.TabIndex = 10;
+            this.exit.Text = "Exit";
+            this.exit.TextColor = System.Drawing.Color.White;
+            this.exit.UseVisualStyleBackColor = true;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // signInBtn
             // 
@@ -155,15 +172,25 @@ namespace Project
             this.signInBtn.UseVisualStyleBackColor = true;
             this.signInBtn.Click += new System.EventHandler(this.signInBtn_Click);
             // 
-            // pictureBox1
+            // dataSet
             // 
-            this.pictureBox1.Image = global::Project.Properties.Resources.paeto;
-            this.pictureBox1.Location = new System.Drawing.Point(80, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(222, 187);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
+            this.dataSet.DataSetName = "DataSet";
+            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // accountsBindingSource
+            // 
+            this.accountsBindingSource.DataMember = "Accounts";
+            this.accountsBindingSource.DataSource = this.dataSet;
+            // 
+            // accountsTableAdapter
+            // 
+            this.accountsTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AccountsTableAdapter = this.accountsTableAdapter;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.UpdateOrder = Project.DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // SignIn
             // 
@@ -171,7 +198,7 @@ namespace Project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(378, 551);
-            this.Controls.Add(this.button_WOC1);
+            this.Controls.Add(this.exit);
             this.Controls.Add(this.signInBtn);
             this.Controls.Add(this.signUp);
             this.Controls.Add(this.label3);
@@ -185,15 +212,16 @@ namespace Project
             this.Name = "SignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign In";
+            this.Load += new System.EventHandler(this.SignIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox username;
         private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -201,8 +229,13 @@ namespace Project
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label signUp;
         private ePOSOne.btnProduct.Button_WOC signInBtn;
-        private ePOSOne.btnProduct.Button_WOC button_WOC1;
+        private ePOSOne.btnProduct.Button_WOC exit;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private DataSet dataSet;
+        private System.Windows.Forms.BindingSource accountsBindingSource;
+        private DataSetTableAdapters.AccountsTableAdapter accountsTableAdapter;
+        private DataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.TextBox username;
     }
 }
 

@@ -63,6 +63,16 @@ namespace Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _138_1388270_transparent_user_png_icon {
+            get {
+                object obj = ResourceManager.GetObject("138-1388270_transparent-user-png-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap faj_slkdf {
             get {
                 object obj = ResourceManager.GetObject("faj;slkdf", resourceCulture);

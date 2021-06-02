@@ -34,18 +34,52 @@ namespace Project
             SignIn.Show();
         }
 
-        private void signUnBtn_Click(object sender, EventArgs e)
+        private void signUpBtn_Click(object sender, EventArgs e)
         {
             if (password.Text == confirm.Text)
             {
-                carshop carshop = new carshop();
-                carshop.Show();
-                this.Visible = false;
+                string Name = null;
+                if(name.Text != string.Empty)
+                {
+                    Name = name.Text;
+                    try
+                    {
+                        accountsTableAdapter.addUser(username.Text, password.Text, Name);
+                        SignIn signIn = new SignIn();
+                        MessageBox.Show("Success! You can now sign in.");
+                        signIn.Show();
+                        this.Close();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("This username is taken. Please, choose another one.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please, enter your name");
+                }
+                
             }
             else
             {
                 MessageBox.Show("Passwords don't match.");
             }
+        }
+
+        private void accountsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.accountsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dataSet);
+
+        }
+
+        private void SignUp_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dataSet.Accounts' table. You can move, or remove it, as needed.
+            this.accountsTableAdapter.Fill(this.dataSet.Accounts);
+
         }
     }
 }
