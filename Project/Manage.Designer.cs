@@ -48,9 +48,9 @@ namespace Project
             // 
             this.label1.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(77, 68);
+            this.label1.Location = new System.Drawing.Point(66, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 35);
+            this.label1.Size = new System.Drawing.Size(69, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Brand";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -60,9 +60,9 @@ namespace Project
             // 
             this.label2.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(457, 68);
+            this.label2.Location = new System.Drawing.Point(392, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 35);
+            this.label2.Size = new System.Drawing.Size(69, 28);
             this.label2.TabIndex = 1;
             this.label2.Text = "Model";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -71,9 +71,9 @@ namespace Project
             // 
             this.label3.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(77, 218);
+            this.label3.Location = new System.Drawing.Point(66, 177);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 35);
+            this.label3.Size = new System.Drawing.Size(69, 28);
             this.label3.TabIndex = 2;
             this.label3.Text = "Year";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -82,39 +82,43 @@ namespace Project
             // 
             this.label4.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(457, 218);
+            this.label4.Location = new System.Drawing.Point(392, 177);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(157, 35);
+            this.label4.Size = new System.Drawing.Size(135, 28);
             this.label4.TabIndex = 3;
             this.label4.Text = "Transmission";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BrandText
             // 
-            this.BrandText.Location = new System.Drawing.Point(82, 115);
+            this.BrandText.Location = new System.Drawing.Point(70, 93);
+            this.BrandText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BrandText.Name = "BrandText";
-            this.BrandText.Size = new System.Drawing.Size(160, 24);
+            this.BrandText.Size = new System.Drawing.Size(138, 20);
             this.BrandText.TabIndex = 4;
             // 
             // ModelText
             // 
-            this.ModelText.Location = new System.Drawing.Point(463, 115);
+            this.ModelText.Location = new System.Drawing.Point(397, 93);
+            this.ModelText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ModelText.Name = "ModelText";
-            this.ModelText.Size = new System.Drawing.Size(160, 24);
+            this.ModelText.Size = new System.Drawing.Size(138, 20);
             this.ModelText.TabIndex = 5;
             // 
             // YearText
             // 
-            this.YearText.Location = new System.Drawing.Point(82, 265);
+            this.YearText.Location = new System.Drawing.Point(70, 215);
+            this.YearText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.YearText.Name = "YearText";
-            this.YearText.Size = new System.Drawing.Size(160, 24);
+            this.YearText.Size = new System.Drawing.Size(138, 20);
             this.YearText.TabIndex = 6;
             // 
             // TransText
             // 
-            this.TransText.Location = new System.Drawing.Point(463, 265);
+            this.TransText.Location = new System.Drawing.Point(397, 215);
+            this.TransText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TransText.Name = "TransText";
-            this.TransText.Size = new System.Drawing.Size(160, 24);
+            this.TransText.Size = new System.Drawing.Size(138, 20);
             this.TransText.TabIndex = 7;
             // 
             // AddCar
@@ -124,13 +128,13 @@ namespace Project
             this.AddCar.FlatAppearance.BorderSize = 0;
             this.AddCar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddCar.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddCar.Location = new System.Drawing.Point(267, 343);
-            this.AddCar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.AddCar.Location = new System.Drawing.Point(229, 279);
+            this.AddCar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddCar.Name = "AddCar";
             this.AddCar.OnHoverBorderColor = System.Drawing.Color.White;
             this.AddCar.OnHoverButtonColor = System.Drawing.Color.SteelBlue;
             this.AddCar.OnHoverTextColor = System.Drawing.Color.White;
-            this.AddCar.Size = new System.Drawing.Size(169, 50);
+            this.AddCar.Size = new System.Drawing.Size(145, 41);
             this.AddCar.TabIndex = 20;
             this.AddCar.Text = "Add Car";
             this.AddCar.TextColor = System.Drawing.Color.Snow;
@@ -143,13 +147,13 @@ namespace Project
             this.cancel1.FlatAppearance.BorderSize = 0;
             this.cancel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel1.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancel1.Location = new System.Drawing.Point(291, 404);
-            this.cancel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.cancel1.Location = new System.Drawing.Point(249, 328);
+            this.cancel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cancel1.Name = "cancel1";
             this.cancel1.OnHoverBorderColor = System.Drawing.Color.WhiteSmoke;
             this.cancel1.OnHoverButtonColor = System.Drawing.Color.Maroon;
             this.cancel1.OnHoverTextColor = System.Drawing.Color.White;
-            this.cancel1.Size = new System.Drawing.Size(118, 41);
+            this.cancel1.Size = new System.Drawing.Size(101, 33);
             this.cancel1.TabIndex = 22;
             this.cancel1.Text = "Cancel";
             this.cancel1.TextColor = System.Drawing.Color.WhiteSmoke;
@@ -161,29 +165,29 @@ namespace Project
             this.name.AutoSize = true;
             this.name.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.name.Location = new System.Drawing.Point(60, 18);
-            this.name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.name.Location = new System.Drawing.Point(51, 15);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(64, 24);
+            this.name.Size = new System.Drawing.Size(54, 19);
             this.name.TabIndex = 26;
             this.name.Text = "NAME";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Project.Properties.Resources._138_1388270_transparent_user_png_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(-16, -3);
+            this.pictureBox1.Location = new System.Drawing.Point(-14, -2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(98, 60);
+            this.pictureBox1.Size = new System.Drawing.Size(84, 49);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
             // 
             // Manage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(748, 468);
+            this.ClientSize = new System.Drawing.Size(641, 380);
             this.Controls.Add(this.name);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cancel1);
@@ -197,6 +201,7 @@ namespace Project
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Manage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage";
