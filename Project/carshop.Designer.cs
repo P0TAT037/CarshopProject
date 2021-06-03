@@ -41,19 +41,22 @@ namespace Project
             this.transmission = new System.Windows.Forms.ComboBox();
             this.price = new System.Windows.Forms.Label();
             this.rentPrice = new System.Windows.Forms.Label();
-            this.manage = new ePOSOne.btnProduct.Button_WOC();
-            this.LogOut = new ePOSOne.btnProduct.Button_WOC();
-            this.rent = new ePOSOne.btnProduct.Button_WOC();
-            this.purchase = new ePOSOne.btnProduct.Button_WOC();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.carsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet = new Project.DataSet();
             this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.accountsTableAdapter = new Project.DataSetTableAdapters.AccountsTableAdapter();
             this.tableAdapterManager = new Project.DataSetTableAdapters.TableAdapterManager();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.carsTableAdapter = new Project.DataSetTableAdapters.CarsTableAdapter();
             this.exit = new ePOSOne.btnProduct.Button_WOC();
+            this.manage = new ePOSOne.btnProduct.Button_WOC();
+            this.LogOut = new ePOSOne.btnProduct.Button_WOC();
+            this.purchase = new ePOSOne.btnProduct.Button_WOC();
+            this.rentBtn = new ePOSOne.btnProduct.Button_WOC();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // name
@@ -118,18 +121,27 @@ namespace Project
             // 
             // brand
             // 
+            this.brand.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.brand.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.brand.BackColor = System.Drawing.Color.DimGray;
             this.brand.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brand.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.brand.FormattingEnabled = true;
+            this.brand.Items.AddRange(new object[] {
+            "BMW",
+            "Toyota",
+            "Audi"});
             this.brand.Location = new System.Drawing.Point(200, 130);
             this.brand.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.brand.Name = "brand";
             this.brand.Size = new System.Drawing.Size(179, 29);
             this.brand.TabIndex = 5;
+            this.brand.SelectedIndexChanged += new System.EventHandler(this.brand_SelectedIndexChanged);
             // 
             // model
             // 
+            this.model.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.model.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.model.BackColor = System.Drawing.Color.DimGray;
             this.model.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.model.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -139,37 +151,52 @@ namespace Project
             this.model.Name = "model";
             this.model.Size = new System.Drawing.Size(179, 29);
             this.model.TabIndex = 6;
+            this.model.SelectedIndexChanged += new System.EventHandler(this.model_SelectedIndexChanged);
             // 
             // year
             // 
+            this.year.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.year.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.year.BackColor = System.Drawing.Color.DimGray;
             this.year.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.year.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.year.FormattingEnabled = true;
+            this.year.Items.AddRange(new object[] {
+            "2020",
+            "2019",
+            "2018",
+            "2017"});
             this.year.Location = new System.Drawing.Point(200, 251);
             this.year.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.year.Name = "year";
             this.year.Size = new System.Drawing.Size(179, 29);
             this.year.TabIndex = 7;
+            this.year.SelectedIndexChanged += new System.EventHandler(this.year_SelectedIndexChanged);
             // 
             // transmission
             // 
+            this.transmission.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.transmission.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.transmission.BackColor = System.Drawing.Color.DimGray;
             this.transmission.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.transmission.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.transmission.FormattingEnabled = true;
+            this.transmission.Items.AddRange(new object[] {
+            "Automatic",
+            "Manual"});
             this.transmission.Location = new System.Drawing.Point(200, 311);
             this.transmission.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.transmission.Name = "transmission";
             this.transmission.Size = new System.Drawing.Size(179, 29);
             this.transmission.TabIndex = 8;
+            this.transmission.SelectedIndexChanged += new System.EventHandler(this.transmission_SelectedIndexChanged);
             // 
             // price
             // 
             this.price.AutoSize = true;
             this.price.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.price.ForeColor = System.Drawing.Color.SpringGreen;
-            this.price.Location = new System.Drawing.Point(270, 44);
+            this.price.Location = new System.Drawing.Point(151, 63);
             this.price.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.price.Name = "price";
             this.price.Size = new System.Drawing.Size(117, 36);
@@ -181,12 +208,72 @@ namespace Project
             this.rentPrice.AutoSize = true;
             this.rentPrice.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rentPrice.ForeColor = System.Drawing.Color.SandyBrown;
-            this.rentPrice.Location = new System.Drawing.Point(512, 44);
+            this.rentPrice.Location = new System.Drawing.Point(446, 63);
             this.rentPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.rentPrice.Name = "rentPrice";
             this.rentPrice.Size = new System.Drawing.Size(112, 36);
             this.rentPrice.TabIndex = 24;
             this.rentPrice.Text = "Rent Price";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Project.Properties.Resources._138_1388270_transparent_user_png_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(-15, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(98, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
+            // carsBindingSource
+            // 
+            this.carsBindingSource.DataMember = "Cars";
+            this.carsBindingSource.DataSource = this.dataSet;
+            // 
+            // dataSet
+            // 
+            this.dataSet.DataSetName = "DataSet";
+            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // accountsBindingSource
+            // 
+            this.accountsBindingSource.DataMember = "Accounts";
+            this.accountsBindingSource.DataSource = this.dataSet;
+            // 
+            // accountsTableAdapter
+            // 
+            this.accountsTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AccountsTableAdapter = this.accountsTableAdapter;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CarsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Project.DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // carsTableAdapter
+            // 
+            this.carsTableAdapter.ClearBeforeFill = true;
+            // 
+            // exit
+            // 
+            this.exit.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.exit.ButtonColor = System.Drawing.Color.DimGray;
+            this.exit.FlatAppearance.BorderSize = 0;
+            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exit.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exit.Location = new System.Drawing.Point(669, 390);
+            this.exit.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.exit.Name = "exit";
+            this.exit.OnHoverBorderColor = System.Drawing.Color.WhiteSmoke;
+            this.exit.OnHoverButtonColor = System.Drawing.Color.DarkRed;
+            this.exit.OnHoverTextColor = System.Drawing.Color.White;
+            this.exit.Size = new System.Drawing.Size(118, 41);
+            this.exit.TabIndex = 26;
+            this.exit.Text = "Exit";
+            this.exit.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.exit.UseVisualStyleBackColor = true;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // manage
             // 
@@ -229,25 +316,6 @@ namespace Project
             this.LogOut.UseVisualStyleBackColor = true;
             this.LogOut.Click += new System.EventHandler(this.LogOut_Click);
             // 
-            // rent
-            // 
-            this.rent.BorderColor = System.Drawing.Color.White;
-            this.rent.ButtonColor = System.Drawing.Color.DimGray;
-            this.rent.FlatAppearance.BorderSize = 0;
-            this.rent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rent.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rent.Location = new System.Drawing.Point(480, 238);
-            this.rent.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.rent.Name = "rent";
-            this.rent.OnHoverBorderColor = System.Drawing.Color.White;
-            this.rent.OnHoverButtonColor = System.Drawing.Color.Peru;
-            this.rent.OnHoverTextColor = System.Drawing.Color.White;
-            this.rent.Size = new System.Drawing.Size(169, 50);
-            this.rent.TabIndex = 20;
-            this.rent.Text = "Rent";
-            this.rent.TextColor = System.Drawing.Color.White;
-            this.rent.UseVisualStyleBackColor = true;
-            // 
             // purchase
             // 
             this.purchase.BorderColor = System.Drawing.Color.White;
@@ -267,55 +335,24 @@ namespace Project
             this.purchase.TextColor = System.Drawing.Color.Snow;
             this.purchase.UseVisualStyleBackColor = true;
             // 
-            // dataSet
+            // rentBtn
             // 
-            this.dataSet.DataSetName = "DataSet";
-            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // accountsBindingSource
-            // 
-            this.accountsBindingSource.DataMember = "Accounts";
-            this.accountsBindingSource.DataSource = this.dataSet;
-            // 
-            // accountsTableAdapter
-            // 
-            this.accountsTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AccountsTableAdapter = this.accountsTableAdapter;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.UpdateOrder = Project.DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Project.Properties.Resources._138_1388270_transparent_user_png_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(-15, -3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(98, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
-            // 
-            // exit
-            // 
-            this.exit.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.exit.ButtonColor = System.Drawing.Color.DimGray;
-            this.exit.FlatAppearance.BorderSize = 0;
-            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exit.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exit.Location = new System.Drawing.Point(669, 390);
-            this.exit.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.exit.Name = "exit";
-            this.exit.OnHoverBorderColor = System.Drawing.Color.WhiteSmoke;
-            this.exit.OnHoverButtonColor = System.Drawing.Color.DarkRed;
-            this.exit.OnHoverTextColor = System.Drawing.Color.White;
-            this.exit.Size = new System.Drawing.Size(118, 41);
-            this.exit.TabIndex = 26;
-            this.exit.Text = "Exit";
-            this.exit.TextColor = System.Drawing.Color.WhiteSmoke;
-            this.exit.UseVisualStyleBackColor = true;
-            this.exit.Click += new System.EventHandler(this.exit_Click);
+            this.rentBtn.BorderColor = System.Drawing.Color.White;
+            this.rentBtn.ButtonColor = System.Drawing.Color.DimGray;
+            this.rentBtn.FlatAppearance.BorderSize = 0;
+            this.rentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rentBtn.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rentBtn.Location = new System.Drawing.Point(480, 230);
+            this.rentBtn.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.rentBtn.Name = "rentBtn";
+            this.rentBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.rentBtn.OnHoverButtonColor = System.Drawing.Color.SandyBrown;
+            this.rentBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.rentBtn.Size = new System.Drawing.Size(169, 50);
+            this.rentBtn.TabIndex = 27;
+            this.rentBtn.Text = "Rent";
+            this.rentBtn.TextColor = System.Drawing.Color.Snow;
+            this.rentBtn.UseVisualStyleBackColor = true;
             // 
             // carshop
             // 
@@ -323,12 +360,12 @@ namespace Project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(800, 442);
+            this.Controls.Add(this.rentBtn);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.rentPrice);
             this.Controls.Add(this.price);
             this.Controls.Add(this.manage);
             this.Controls.Add(this.LogOut);
-            this.Controls.Add(this.rent);
             this.Controls.Add(this.purchase);
             this.Controls.Add(this.transmission);
             this.Controls.Add(this.year);
@@ -346,9 +383,10 @@ namespace Project
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "carshop";
             this.Load += new System.EventHandler(this.carshop_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,5 +415,8 @@ namespace Project
         private DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.PictureBox pictureBox1;
         private ePOSOne.btnProduct.Button_WOC exit;
+        private System.Windows.Forms.BindingSource carsBindingSource;
+        private DataSetTableAdapters.CarsTableAdapter carsTableAdapter;
+        private ePOSOne.btnProduct.Button_WOC rentBtn;
     }
 }
