@@ -12,6 +12,8 @@ namespace Project
 {
     public partial class carshop : Form
     {
+        int id;
+        decimal Price, Rent;
         public carshop()
         {
             InitializeComponent();
@@ -36,12 +38,17 @@ namespace Project
 
         private void carshop_Load(object sender, EventArgs e)
         {
+            for (int i = 0; i < carsTableAdapter.GetData().Count; i++)
+            {
+                if (!brand.Items.Contains(carsTableAdapter.GetData()[i][1]))
+                {
+                    brand.Items.Add(carsTableAdapter.GetData()[i][1]);
+                }
+            }
             
-            // TODO: This line of code loads data into the 'dataSet.Cars' table. You can move, or remove it, as needed.
             this.carsTableAdapter.Fill(this.dataSet.Cars);
-
-            // TODO: This line of code loads data into the 'dataSet.Accounts' table. You can move, or remove it, as needed.
             this.accountsTableAdapter.Fill(this.dataSet.Accounts);
+
             name.Text = accountsTableAdapter.getName(SignIn.userName);
             bool admin = (bool)accountsTableAdapter.checkAdmin(SignIn.userName);
             if(admin)
@@ -63,44 +70,68 @@ namespace Project
             Application.Exit();
         }
 
+        private void confirm_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Successful!");
+            purchase.Visible = true;
+            rentBtn.Visible = true;
+            confirm.Visible = false;
+            price.Visible = false;
+            
+        }
+
+        private void cancel_Click(object sender, EventArgs e)
+        {
+            
+            purchase.Visible = true;
+            rentBtn.Visible = true;
+            confirm.Visible = false;
+            cancel.Visible = false;
+            price.Visible = false;
+        }
+
         private void brand_SelectedIndexChanged(object sender, EventArgs e)
         {
             model.Items.Clear();
-            for (int i = 0; i < carsTableAdapter.GetModel(brand.Text).Count; i++)
+            for (int i = 0; i < carsTableAdapter.GetByBrand(brand.Text).Count; i++)
             {
-                model.Items.Add(carsTableAdapter.GetModel(brand.Text)[i][2]);
+                model.Items.Add(carsTableAdapter.GetByBrand(brand.Text)[i][2]);
             }
-            price.Text = "Total Price: " + Price.ToString("c");
-            rentPrice.Text = "Rent Price: " + Rent.ToString("c") + "/month";
+            
         }
 
-        int id;
-        decimal Price, Rent;
-
-        private void transmission_SelectedIndexChanged(object sender, EventArgs e)
+        private void purchase_Click(object sender, EventArgs e)
         {
-            Price = (decimal)carsTableAdapter.GetPrice(id) - (1000 * (2020 - int.Parse(year.Text)));
-            if (transmission.SelectedIndex == 1)
+            purchase.Visible = false;
+            rentBtn.Visible = false;
+            confirm.Visible = true;
+            cancel.Visible = true;
+            Price = (decimal)carsTableAdapter.GetPrice(id);
+            Price -= ((decimal)0.18 * Price) * (2020 - decimal.Parse(year.Text));
+            if(transmission.SelectedIndex == 1)
             {
-                Price -= 1000;
-            }
-
-            Rent = (decimal)carsTableAdapter.getRent(id) - (200 * (2020 - int.Parse(year.Text)));
-            if (transmission.SelectedIndex == 1)
-            {
-                Rent -= 500;
+                Price -= ((decimal)0.02 * Price);
             }
             price.Text = "Total Price: " + Price.ToString("c");
-            rentPrice.Text = "Rent Price: " + Rent.ToString("c") + "/month";
-
+            price.ForeColor = Color.SpringGreen;
+            price.Visible = true;
         }
 
-        private void year_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Price -= (1000 * (2020 - int.Parse(year.Text)));
-            Rent -= (200 * (2020 - int.Parse(year.Text)));
-            price.Text = "Total Price: " + Price.ToString("c");
-            rentPrice.Text = "Rent Price: " + Rent.ToString("c") + "/month";
+        private void rentBtn_Click(object sender, EventArgs e)
+        { 
+            purchase.Visible = false;
+            rentBtn.Visible = false;
+            confirm.Visible = true;
+            cancel.Visible = true;
+            Rent = (decimal)carsTableAdapter.GetPrice(id);
+            Rent -= ((decimal)0.01 * Rent) * (2020 - decimal.Parse(year.Text));
+            if (transmission.SelectedIndex == 1)
+            {
+                Rent -= ((decimal)0.01 * Rent);
+            }
+            price.Text = "Rent Price: " + Rent.ToString("c") + "/day";
+            price.ForeColor = Color.SandyBrown;
+            price.Visible = true;
         }
 
         private void model_SelectedIndexChanged(object sender, EventArgs e)
@@ -108,9 +139,7 @@ namespace Project
             id = (int)carsTableAdapter.getId(brand.Text, model.Text);
             Price = (decimal)carsTableAdapter.GetPrice(id);
             Rent = (decimal)carsTableAdapter.getRent(id);
-            price.Text = "Total Price: " + Price.ToString("c");
-            rentPrice.Text = "Rent Price: " + Rent.ToString("c") + "/month";
-
         }
     }
+    
 }

@@ -1889,7 +1889,7 @@ SELECT id, brand, model, price, [rent price] FROM Cars WHERE (id = @id)";
         public virtual int FillByModel(DataSet.CarsDataTable dataTable, string brand) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((brand == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("brand");
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(brand));
@@ -1905,10 +1905,10 @@ SELECT id, brand, model, price, [rent price] FROM Cars WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual DataSet.CarsDataTable GetModel(string brand) {
+        public virtual DataSet.CarsDataTable GetByBrand(string brand) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((brand == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("brand");
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(brand));
