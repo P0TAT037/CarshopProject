@@ -32,14 +32,8 @@ namespace Project
 
         private void Manage_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dataSet.Cars' table. You can move, or remove it, as needed.
-            this.carsTableAdapter.Fill(this.dataSet.Cars);
-            // TODO: This line of code loads data into the 'dataSet.Accounts' table. You can move, or remove it, as needed.
-            this.accountsTableAdapter.Fill(this.dataSet.Accounts);
             name.Text = accountsTableAdapter.getName(SignIn.userName);
-            // TODO: This line of code loads data into the 'dataSet.Cars' table. You can move, or remove it, as needed.
             this.carsTableAdapter.Fill(this.dataSet.Cars);
-            // TODO: This line of code loads data into the 'dataSet.Accounts' table. You can move, or remove it, as needed.
             this.accountsTableAdapter.Fill(this.dataSet.Accounts);
 
         }
@@ -59,5 +53,38 @@ namespace Project
 
         }
 
+        private void carSearchBtn_Click(object sender, EventArgs e)
+        {
+            if (carSearch.Text == string.Empty)
+            {
+                carsTableAdapter.Fill(this.dataSet.Cars);
+            }
+            else
+            {
+                carsTableAdapter.SearchCars(this.dataSet.Cars, carSearch.Text);
+            }
+        }
+
+        private void userSearchBtn_Click(object sender, EventArgs e)
+        {
+            if (userSearch.Text == string.Empty)
+            {
+                accountsTableAdapter.Fill(this.dataSet.Accounts);
+            }
+            else
+            {
+                accountsTableAdapter.SearchUsers(this.dataSet.Accounts, userSearch.Text);
+            }
+        }
+
+        private void carSearch_TextChanged(object sender, EventArgs e)
+        {
+            this.AcceptButton = carSearchBtn;
+        }
+
+        private void userSearch_TextChanged(object sender, EventArgs e)
+        {
+            this.AcceptButton = userSearchBtn;
+        }
     }
 }

@@ -38,6 +38,8 @@ namespace Project
 
         private void carshop_Load(object sender, EventArgs e)
         {
+            this.AcceptButton = purchase;
+            this.CancelButton = LogOut;
             for (int i = 0; i < carsTableAdapter.GetData().Count; i++)
             {
                 if (!brand.Items.Contains(carsTableAdapter.GetData()[i][1]))
@@ -73,6 +75,8 @@ namespace Project
         private void confirm_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Successful!");
+            this.AcceptButton = purchase;
+            this.CancelButton = LogOut;
             purchase.Visible = true;
             rentBtn.Visible = true;
             confirm.Visible = false;
@@ -82,7 +86,8 @@ namespace Project
 
         private void cancel_Click(object sender, EventArgs e)
         {
-            
+            this.AcceptButton = purchase;
+            this.CancelButton = LogOut;
             purchase.Visible = true;
             rentBtn.Visible = true;
             confirm.Visible = false;
@@ -102,36 +107,48 @@ namespace Project
 
         private void purchase_Click(object sender, EventArgs e)
         {
-            purchase.Visible = false;
-            rentBtn.Visible = false;
-            confirm.Visible = true;
-            cancel.Visible = true;
-            Price = (decimal)carsTableAdapter.GetPrice(id);
-            Price -= ((decimal)0.18 * Price) * (2020 - decimal.Parse(year.Text));
-            if(transmission.SelectedIndex == 1)
+            try
             {
-                Price -= ((decimal)0.02 * Price);
+                Price = (decimal)carsTableAdapter.GetPrice(id);
+                Price -= ((decimal)0.18 * Price) * (2021 - decimal.Parse(year.Text));
+                if (transmission.SelectedIndex == 1)
+                {
+                    Price -= ((decimal)0.02 * Price);
+                }
+                price.Text = "Total Price: " + Price.ToString("c");
+                price.ForeColor = Color.SpringGreen;
+                this.AcceptButton = confirm;
+                this.CancelButton = cancel;
+                purchase.Visible = false;
+                rentBtn.Visible = false;
+                confirm.Visible = true;
+                cancel.Visible = true;
+                price.Visible = true;
             }
-            price.Text = "Total Price: " + Price.ToString("c");
-            price.ForeColor = Color.SpringGreen;
-            price.Visible = true;
+            catch { }
         }
 
         private void rentBtn_Click(object sender, EventArgs e)
-        { 
-            purchase.Visible = false;
-            rentBtn.Visible = false;
-            confirm.Visible = true;
-            cancel.Visible = true;
-            Rent = (decimal)carsTableAdapter.GetPrice(id);
-            Rent -= ((decimal)0.01 * Rent) * (2020 - decimal.Parse(year.Text));
-            if (transmission.SelectedIndex == 1)
+        {
+            try
             {
-                Rent -= ((decimal)0.01 * Rent);
+                Rent = (decimal)carsTableAdapter.getRent(id);
+                Rent -= ((decimal)0.01 * Rent) * (2021 - decimal.Parse(year.Text));
+                if (transmission.SelectedIndex == 1)
+                {
+                    Rent -= ((decimal)0.01 * Rent);
+                }
+                price.Text = "Rent Price: " + Rent.ToString("c") + "/day";
+                price.ForeColor = Color.SandyBrown;
+                this.AcceptButton = confirm;
+                this.CancelButton = cancel;
+                purchase.Visible = false;
+                rentBtn.Visible = false;
+                confirm.Visible = true;
+                cancel.Visible = true;
+                price.Visible = true;
             }
-            price.Text = "Rent Price: " + Rent.ToString("c") + "/day";
-            price.ForeColor = Color.SandyBrown;
-            price.Visible = true;
+            catch { }
         }
 
         private void model_SelectedIndexChanged(object sender, EventArgs e)

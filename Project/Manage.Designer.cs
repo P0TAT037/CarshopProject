@@ -31,117 +31,70 @@ namespace Project
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manage));
-            this.back = new ePOSOne.btnProduct.Button_WOC();
-            this.exit = new ePOSOne.btnProduct.Button_WOC();
             this.name = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataSet = new Project.DataSet();
-            this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.accountsTableAdapter = new Project.DataSetTableAdapters.AccountsTableAdapter();
-            this.tableAdapterManager = new Project.DataSetTableAdapters.TableAdapterManager();
-            this.carsTableAdapter = new Project.DataSetTableAdapters.CarsTableAdapter();
             this.accountsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet = new Project.DataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.accountsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.accountsDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.carsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.carsDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).BeginInit();
+            this.carsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userSearch = new System.Windows.Forms.TextBox();
+            this.carSearch = new System.Windows.Forms.TextBox();
+            this.userSearchBtn = new System.Windows.Forms.Button();
+            this.exit = new ePOSOne.btnProduct.Button_WOC();
+            this.back = new ePOSOne.btnProduct.Button_WOC();
+            this.accountsTableAdapter = new Project.DataSetTableAdapters.AccountsTableAdapter();
+            this.tableAdapterManager = new Project.DataSetTableAdapters.TableAdapterManager();
+            this.carsTableAdapter = new Project.DataSetTableAdapters.CarsTableAdapter();
+            this.carSearchBtn = new System.Windows.Forms.Button();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.accountsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingNavigator)).BeginInit();
             this.accountsBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.carsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // back
-            // 
-            this.back.BorderColor = System.Drawing.Color.White;
-            this.back.ButtonColor = System.Drawing.Color.DimGray;
-            this.back.FlatAppearance.BorderSize = 0;
-            this.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.back.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.back.Location = new System.Drawing.Point(12, 463);
-            this.back.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.back.Name = "back";
-            this.back.OnHoverBorderColor = System.Drawing.Color.White;
-            this.back.OnHoverButtonColor = System.Drawing.Color.SteelBlue;
-            this.back.OnHoverTextColor = System.Drawing.Color.White;
-            this.back.Size = new System.Drawing.Size(169, 50);
-            this.back.TabIndex = 20;
-            this.back.Text = "Back";
-            this.back.TextColor = System.Drawing.Color.Snow;
-            this.back.UseVisualStyleBackColor = true;
-            this.back.Click += new System.EventHandler(this.back_Click);
-            // 
-            // exit
-            // 
-            this.exit.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.exit.ButtonColor = System.Drawing.Color.DimGray;
-            this.exit.FlatAppearance.BorderSize = 0;
-            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exit.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exit.Location = new System.Drawing.Point(757, 463);
-            this.exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.exit.Name = "exit";
-            this.exit.OnHoverBorderColor = System.Drawing.Color.WhiteSmoke;
-            this.exit.OnHoverButtonColor = System.Drawing.Color.Maroon;
-            this.exit.OnHoverTextColor = System.Drawing.Color.White;
-            this.exit.Size = new System.Drawing.Size(169, 50);
-            this.exit.TabIndex = 22;
-            this.exit.Text = "Exit";
-            this.exit.TextColor = System.Drawing.Color.WhiteSmoke;
-            this.exit.UseVisualStyleBackColor = true;
-            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // name
             // 
             this.name.AutoSize = true;
             this.name.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.name.Location = new System.Drawing.Point(55, 19);
+            this.name.Location = new System.Drawing.Point(63, 19);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(64, 24);
             this.name.TabIndex = 26;
             this.name.Text = "NAME";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Project.Properties.Resources._138_1388270_transparent_user_png_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(-20, -3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(98, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(619, 112);
+            this.label1.Location = new System.Drawing.Point(709, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(152, 24);
             this.label1.TabIndex = 28;
@@ -152,36 +105,11 @@ namespace Project
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(8, 112);
+            this.label2.Location = new System.Drawing.Point(9, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 24);
             this.label2.TabIndex = 29;
             this.label2.Text = "Inventory";
-            // 
-            // dataSet
-            // 
-            this.dataSet.DataSetName = "DataSet";
-            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // accountsBindingSource
-            // 
-            this.accountsBindingSource.DataMember = "Accounts";
-            this.accountsBindingSource.DataSource = this.dataSet;
-            // 
-            // accountsTableAdapter
-            // 
-            this.accountsTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AccountsTableAdapter = this.accountsTableAdapter;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CarsTableAdapter = this.carsTableAdapter;
-            this.tableAdapterManager.UpdateOrder = Project.DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // carsTableAdapter
-            // 
-            this.carsTableAdapter.ClearBeforeFill = true;
             // 
             // accountsBindingNavigator
             // 
@@ -205,110 +133,58 @@ namespace Project
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.accountsBindingNavigatorSaveItem});
-            this.accountsBindingNavigator.Location = new System.Drawing.Point(294, 413);
+            this.accountsBindingNavigator.Location = new System.Drawing.Point(336, 413);
             this.accountsBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.accountsBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.accountsBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.accountsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.accountsBindingNavigator.Name = "accountsBindingNavigator";
             this.accountsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.accountsBindingNavigator.Size = new System.Drawing.Size(321, 27);
+            this.accountsBindingNavigator.Size = new System.Drawing.Size(328, 31);
             this.accountsBindingNavigator.TabIndex = 30;
             this.accountsBindingNavigator.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorAddNewItem
+            // accountsBindingSource
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
+            this.accountsBindingSource.DataMember = "Accounts";
+            this.accountsBindingSource.DataSource = this.dataSet;
+            // 
+            // dataSet
+            // 
+            this.dataSet.DataSetName = "DataSet";
+            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(57, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // accountsBindingNavigatorSaveItem
-            // 
-            this.accountsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.accountsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("accountsBindingNavigatorSaveItem.Image")));
-            this.accountsBindingNavigatorSaveItem.Name = "accountsBindingNavigatorSaveItem";
-            this.accountsBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
-            this.accountsBindingNavigatorSaveItem.Text = "Save Data";
-            this.accountsBindingNavigatorSaveItem.Click += new System.EventHandler(this.accountsBindingNavigatorSaveItem_Click_1);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // accountsDataGridView
             // 
@@ -320,11 +196,11 @@ namespace Project
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewCheckBoxColumn1});
             this.accountsDataGridView.DataSource = this.accountsBindingSource;
-            this.accountsDataGridView.Location = new System.Drawing.Point(607, 139);
+            this.accountsDataGridView.Location = new System.Drawing.Point(694, 139);
             this.accountsDataGridView.Name = "accountsDataGridView";
             this.accountsDataGridView.RowHeadersWidth = 51;
             this.accountsDataGridView.RowTemplate.Height = 26;
-            this.accountsDataGridView.Size = new System.Drawing.Size(331, 271);
+            this.accountsDataGridView.Size = new System.Drawing.Size(378, 271);
             this.accountsDataGridView.TabIndex = 30;
             // 
             // dataGridViewTextBoxColumn1
@@ -343,11 +219,6 @@ namespace Project
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             this.dataGridViewCheckBoxColumn1.Width = 125;
             // 
-            // carsBindingSource
-            // 
-            this.carsBindingSource.DataMember = "Cars";
-            this.carsBindingSource.DataSource = this.dataSet;
-            // 
             // carsDataGridView
             // 
             this.carsDataGridView.AutoGenerateColumns = false;
@@ -362,7 +233,7 @@ namespace Project
             this.carsDataGridView.Name = "carsDataGridView";
             this.carsDataGridView.RowHeadersWidth = 51;
             this.carsDataGridView.RowTemplate.Height = 26;
-            this.carsDataGridView.Size = new System.Drawing.Size(607, 271);
+            this.carsDataGridView.Size = new System.Drawing.Size(694, 271);
             this.carsDataGridView.TabIndex = 30;
             // 
             // dataGridViewTextBoxColumn5
@@ -397,12 +268,195 @@ namespace Project
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.Width = 125;
             // 
+            // carsBindingSource
+            // 
+            this.carsBindingSource.DataMember = "Cars";
+            this.carsBindingSource.DataSource = this.dataSet;
+            // 
+            // userSearch
+            // 
+            this.userSearch.BackColor = System.Drawing.Color.DimGray;
+            this.userSearch.ForeColor = System.Drawing.SystemColors.Control;
+            this.userSearch.Location = new System.Drawing.Point(789, 110);
+            this.userSearch.Name = "userSearch";
+            this.userSearch.Size = new System.Drawing.Size(234, 22);
+            this.userSearch.TabIndex = 31;
+            this.userSearch.TextChanged += new System.EventHandler(this.userSearch_TextChanged);
+            // 
+            // carSearch
+            // 
+            this.carSearch.BackColor = System.Drawing.Color.DimGray;
+            this.carSearch.ForeColor = System.Drawing.SystemColors.Control;
+            this.carSearch.Location = new System.Drawing.Point(383, 109);
+            this.carSearch.Name = "carSearch";
+            this.carSearch.Size = new System.Drawing.Size(241, 22);
+            this.carSearch.TabIndex = 32;
+            this.carSearch.TextChanged += new System.EventHandler(this.carSearch_TextChanged);
+            // 
+            // userSearchBtn
+            // 
+            this.userSearchBtn.BackgroundImage = global::Project.Properties.Resources.glass;
+            this.userSearchBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userSearchBtn.Location = new System.Drawing.Point(1030, 109);
+            this.userSearchBtn.Name = "userSearchBtn";
+            this.userSearchBtn.Size = new System.Drawing.Size(34, 25);
+            this.userSearchBtn.TabIndex = 33;
+            this.userSearchBtn.UseVisualStyleBackColor = true;
+            this.userSearchBtn.Click += new System.EventHandler(this.userSearchBtn_Click);
+            // 
+            // exit
+            // 
+            this.exit.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.exit.ButtonColor = System.Drawing.Color.DimGray;
+            this.exit.FlatAppearance.BorderSize = 0;
+            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exit.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exit.Location = new System.Drawing.Point(865, 463);
+            this.exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.exit.Name = "exit";
+            this.exit.OnHoverBorderColor = System.Drawing.Color.WhiteSmoke;
+            this.exit.OnHoverButtonColor = System.Drawing.Color.Maroon;
+            this.exit.OnHoverTextColor = System.Drawing.Color.White;
+            this.exit.Size = new System.Drawing.Size(193, 50);
+            this.exit.TabIndex = 22;
+            this.exit.Text = "Exit";
+            this.exit.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.exit.UseVisualStyleBackColor = true;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
+            // back
+            // 
+            this.back.BorderColor = System.Drawing.Color.White;
+            this.back.ButtonColor = System.Drawing.Color.DimGray;
+            this.back.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.back.FlatAppearance.BorderSize = 0;
+            this.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.back.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.back.Location = new System.Drawing.Point(14, 463);
+            this.back.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.back.Name = "back";
+            this.back.OnHoverBorderColor = System.Drawing.Color.White;
+            this.back.OnHoverButtonColor = System.Drawing.Color.SteelBlue;
+            this.back.OnHoverTextColor = System.Drawing.Color.White;
+            this.back.Size = new System.Drawing.Size(193, 50);
+            this.back.TabIndex = 20;
+            this.back.Text = "Back";
+            this.back.TextColor = System.Drawing.Color.Snow;
+            this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
+            // 
+            // accountsTableAdapter
+            // 
+            this.accountsTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AccountsTableAdapter = this.accountsTableAdapter;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CarsTableAdapter = this.carsTableAdapter;
+            this.tableAdapterManager.UpdateOrder = Project.DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // carsTableAdapter
+            // 
+            this.carsTableAdapter.ClearBeforeFill = true;
+            // 
+            // carSearchBtn
+            // 
+            this.carSearchBtn.BackgroundImage = global::Project.Properties.Resources.glass;
+            this.carSearchBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.carSearchBtn.Location = new System.Drawing.Point(631, 109);
+            this.carSearchBtn.Name = "carSearchBtn";
+            this.carSearchBtn.Size = new System.Drawing.Size(34, 25);
+            this.carSearchBtn.TabIndex = 34;
+            this.carSearchBtn.UseVisualStyleBackColor = true;
+            this.carSearchBtn.Click += new System.EventHandler(this.carSearchBtn_Click);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // accountsBindingNavigatorSaveItem
+            // 
+            this.accountsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.accountsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("accountsBindingNavigatorSaveItem.Image")));
+            this.accountsBindingNavigatorSaveItem.Name = "accountsBindingNavigatorSaveItem";
+            this.accountsBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 28);
+            this.accountsBindingNavigatorSaveItem.Text = "Save Data";
+            this.accountsBindingNavigatorSaveItem.Click += new System.EventHandler(this.accountsBindingNavigatorSaveItem_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Project.Properties.Resources._138_1388270_transparent_user_png_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(-23, -3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(112, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
             // Manage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AcceptButton = this.carSearchBtn;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(938, 524);
+            this.CancelButton = this.back;
+            this.ClientSize = new System.Drawing.Size(1072, 524);
+            this.Controls.Add(this.carSearchBtn);
+            this.Controls.Add(this.userSearchBtn);
+            this.Controls.Add(this.carSearch);
+            this.Controls.Add(this.userSearch);
             this.Controls.Add(this.carsDataGridView);
             this.Controls.Add(this.accountsDataGridView);
             this.Controls.Add(this.accountsBindingNavigator);
@@ -418,15 +472,15 @@ namespace Project
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage";
             this.Load += new System.EventHandler(this.Manage_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingNavigator)).EndInit();
             this.accountsBindingNavigator.ResumeLayout(false);
             this.accountsBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.carsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -466,5 +520,9 @@ namespace Project
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.TextBox userSearch;
+        private System.Windows.Forms.TextBox carSearch;
+        private System.Windows.Forms.Button userSearchBtn;
+        private System.Windows.Forms.Button carSearchBtn;
     }
 }

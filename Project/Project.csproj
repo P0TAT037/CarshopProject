@@ -157,6 +157,7 @@
       <DependentUpon>Database.mdf</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\glass.png" />
     <None Include="Resources\138-1388270_transparent-user-png-icon.png" />
   </ItemGroup>
   <ItemGroup>
