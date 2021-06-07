@@ -48,8 +48,7 @@ namespace Project
                 }
             }
             
-            this.carsTableAdapter.Fill(this.dataSet.Cars);
-            this.accountsTableAdapter.Fill(this.dataSet.Accounts);
+            
 
             name.Text = accountsTableAdapter.getName(SignIn.userName);
             bool admin = (bool)accountsTableAdapter.checkAdmin(SignIn.userName);
@@ -74,7 +73,8 @@ namespace Project
 
         private void confirm_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Successful!");
+            MessageBox.Show("Congratulations! Your car has been booked.");
+
             this.AcceptButton = purchase;
             this.CancelButton = LogOut;
             purchase.Visible = true;
@@ -110,7 +110,7 @@ namespace Project
             try
             {
                 Price = (decimal)carsTableAdapter.GetPrice(id);
-                Price -= ((decimal)0.18 * Price) * (2021 - decimal.Parse(year.Text));
+                Price -= ((decimal)0.01 * Price) * (2021 - decimal.Parse(year.Text));
                 if (transmission.SelectedIndex == 1)
                 {
                     Price -= ((decimal)0.02 * Price);

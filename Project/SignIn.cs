@@ -74,12 +74,7 @@ namespace Project
 
         }
 
-        private void SignIn_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'dataSet.Accounts' table. You can move, or remove it, as needed.
-            this.accountsTableAdapter.Fill(this.dataSet.Accounts);
-
-        }
+        
     }
 
     class methods
