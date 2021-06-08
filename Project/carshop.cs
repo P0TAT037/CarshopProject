@@ -38,7 +38,7 @@ namespace Project
 
         private void carshop_Load(object sender, EventArgs e)
         {
-            this.AcceptButton = purchase;
+            this.AcceptButton = purchaseBtn;
             this.CancelButton = LogOut;
             for (int i = 0; i < carsTableAdapter.GetData().Count; i++)
             {
@@ -52,9 +52,9 @@ namespace Project
 
             name.Text = accountsTableAdapter.getName(SignIn.userName);
             bool admin = (bool)accountsTableAdapter.checkAdmin(SignIn.userName);
-            if(admin)
+            if(admin) //Checks if the user is an admin or not
             {
-                manage.Visible = true;
+                manage.Visible = true; //Show the button manage to Admin
             }
         }
 
@@ -75,9 +75,9 @@ namespace Project
         {
             MessageBox.Show("Congratulations! Your car has been booked.");
 
-            this.AcceptButton = purchase;
+            this.AcceptButton = purchaseBtn;
             this.CancelButton = LogOut;
-            purchase.Visible = true;
+            purchaseBtn.Visible = true;
             rentBtn.Visible = true;
             confirm.Visible = false;
             price.Visible = false;
@@ -86,26 +86,28 @@ namespace Project
 
         private void cancel_Click(object sender, EventArgs e)
         {
-            this.AcceptButton = purchase;
+            this.AcceptButton = purchaseBtn;
             this.CancelButton = LogOut;
-            purchase.Visible = true;
+            purchaseBtn.Visible = true;
             rentBtn.Visible = true;
             confirm.Visible = false;
             cancel.Visible = false;
             price.Visible = false;
         }
 
-        private void brand_SelectedIndexChanged(object sender, EventArgs e)
+        private void brand_SelectedIndexChanged(object sender, EventArgs e) 
         {
             model.Items.Clear();
+            //Fills models combobox items based on selected brand
             for (int i = 0; i < carsTableAdapter.GetByBrand(brand.Text).Count; i++)
+
             {
                 model.Items.Add(carsTableAdapter.GetByBrand(brand.Text)[i][2]);
             }
             
         }
 
-        private void purchase_Click(object sender, EventArgs e)
+        private void purchase_Click(object sender, EventArgs e) //Shows total price and changes the quantity
         {
             CarProperties AirBag = new CarProperties("Air Bag", 800);
             CarProperties Rear = new CarProperties("Rear View Camera", 200);
@@ -113,7 +115,7 @@ namespace Project
             CarProperties ABS = new CarProperties("ABS", 400);
             CarProperties Sun = new CarProperties("Sun Roof", 300);
             
-            try
+            try //Changes the price in some of cases
             {
                 Price = (decimal)carsTableAdapter.GetPrice(id);
                 Price -= ((decimal)0.01 * Price) * (2021 - decimal.Parse(year.Text));
@@ -145,7 +147,7 @@ namespace Project
                 price.ForeColor = Color.SpringGreen;
                 this.AcceptButton = confirm;
                 this.CancelButton = cancel;
-                purchase.Visible = false;
+                purchaseBtn.Visible = false;
                 rentBtn.Visible = false;
                 confirm.Visible = true;
                 cancel.Visible = true;
@@ -154,7 +156,7 @@ namespace Project
             catch { }
         }
 
-        private void rentBtn_Click(object sender, EventArgs e)
+        private void rentBtn_Click(object sender, EventArgs e) //Shows rent price and changes the quantity
         {
             try
             {
@@ -168,7 +170,7 @@ namespace Project
                 price.ForeColor = Color.SandyBrown;
                 this.AcceptButton = confirm;
                 this.CancelButton = cancel;
-                purchase.Visible = false;
+                purchaseBtn.Visible = false;
                 rentBtn.Visible = false;
                 confirm.Visible = true;
                 cancel.Visible = true;

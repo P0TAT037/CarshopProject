@@ -24,7 +24,7 @@ namespace Project
             Application.Exit();
         }
 
-        private void accountsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void accountsBindingNavigatorSaveItem_Click(object sender, EventArgs e) 
         {
             this.Validate();
             this.accountsBindingSource.EndEdit();
@@ -55,6 +55,7 @@ namespace Project
 
         }
 
+        //Searches the car table
         private void carSearchBtn_Click(object sender, EventArgs e)
         {
             if (carSearch.Text == string.Empty)
@@ -67,6 +68,7 @@ namespace Project
             }
         }
 
+        //Searches the users table
         private void userSearchBtn_Click(object sender, EventArgs e)
         {
             if (userSearch.Text == string.Empty)
@@ -97,7 +99,7 @@ namespace Project
         }
     }
 }
-class CarProperties
+class CarProperties 
 {
     private string name;
     private decimal price;

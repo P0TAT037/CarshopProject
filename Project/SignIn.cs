@@ -24,7 +24,7 @@ namespace Project
         
         private void showPassword_CheckedChanged(object sender, EventArgs e)
         {
-            if (showPassword.Checked)
+            if (showPassword.Checked) //Hides the password 
             {
                 password.UseSystemPasswordChar = false;
             }
