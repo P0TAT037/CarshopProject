@@ -78,7 +78,7 @@ namespace Project
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.InventorynavigatorSaveBtn = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingNavigator)).BeginInit();
             this.accountsBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).BeginInit();
@@ -199,6 +199,7 @@ namespace Project
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(57, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -335,7 +336,7 @@ namespace Project
             this.userSearch.Location = new System.Drawing.Point(789, 110);
             this.userSearch.Name = "userSearch";
             this.userSearch.Size = new System.Drawing.Size(234, 22);
-            this.userSearch.TabIndex = 31;
+            this.userSearch.TabIndex = 2;
             this.userSearch.TextChanged += new System.EventHandler(this.userSearch_TextChanged);
             // 
             // carSearch
@@ -345,7 +346,7 @@ namespace Project
             this.carSearch.Location = new System.Drawing.Point(383, 109);
             this.carSearch.Name = "carSearch";
             this.carSearch.Size = new System.Drawing.Size(241, 22);
-            this.carSearch.TabIndex = 32;
+            this.carSearch.TabIndex = 0;
             this.carSearch.TextChanged += new System.EventHandler(this.carSearch_TextChanged);
             // 
             // userSearchBtn
@@ -355,7 +356,7 @@ namespace Project
             this.userSearchBtn.Location = new System.Drawing.Point(1030, 109);
             this.userSearchBtn.Name = "userSearchBtn";
             this.userSearchBtn.Size = new System.Drawing.Size(34, 25);
-            this.userSearchBtn.TabIndex = 33;
+            this.userSearchBtn.TabIndex = 3;
             this.userSearchBtn.UseVisualStyleBackColor = true;
             this.userSearchBtn.Click += new System.EventHandler(this.userSearchBtn_Click);
             // 
@@ -373,7 +374,7 @@ namespace Project
             this.exit.OnHoverButtonColor = System.Drawing.Color.Maroon;
             this.exit.OnHoverTextColor = System.Drawing.Color.White;
             this.exit.Size = new System.Drawing.Size(193, 50);
-            this.exit.TabIndex = 22;
+            this.exit.TabIndex = 5;
             this.exit.Text = "Exit";
             this.exit.TextColor = System.Drawing.Color.WhiteSmoke;
             this.exit.UseVisualStyleBackColor = true;
@@ -394,7 +395,7 @@ namespace Project
             this.back.OnHoverButtonColor = System.Drawing.Color.SteelBlue;
             this.back.OnHoverTextColor = System.Drawing.Color.White;
             this.back.Size = new System.Drawing.Size(193, 50);
-            this.back.TabIndex = 20;
+            this.back.TabIndex = 4;
             this.back.Text = "Back";
             this.back.TextColor = System.Drawing.Color.Snow;
             this.back.UseVisualStyleBackColor = true;
@@ -422,7 +423,7 @@ namespace Project
             this.carSearchBtn.Location = new System.Drawing.Point(631, 109);
             this.carSearchBtn.Name = "carSearchBtn";
             this.carSearchBtn.Size = new System.Drawing.Size(34, 25);
-            this.carSearchBtn.TabIndex = 34;
+            this.carSearchBtn.TabIndex = 1;
             this.carSearchBtn.UseVisualStyleBackColor = true;
             this.carSearchBtn.Click += new System.EventHandler(this.carSearchBtn_Click);
             // 
@@ -458,7 +459,7 @@ namespace Project
             this.toolStripSeparator3,
             this.toolStripButton1,
             this.toolStripButton2,
-            this.toolStripButton7});
+            this.InventorynavigatorSaveBtn});
             this.bindingNavigator1.Location = new System.Drawing.Point(153, 413);
             this.bindingNavigator1.MoveFirstItem = this.toolStripButton3;
             this.bindingNavigator1.MoveLastItem = this.toolStripButton6;
@@ -466,7 +467,7 @@ namespace Project
             this.bindingNavigator1.MovePreviousItem = this.toolStripButton4;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.toolStripTextBox1;
-            this.bindingNavigator1.Size = new System.Drawing.Size(328, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(367, 27);
             this.bindingNavigator1.TabIndex = 35;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -522,6 +523,7 @@ namespace Project
             // 
             this.toolStripTextBox1.AccessibleName = "Position";
             this.toolStripTextBox1.AutoSize = false;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(57, 27);
             this.toolStripTextBox1.Text = "0";
@@ -555,13 +557,14 @@ namespace Project
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
-            // toolStripButton7
+            // InventorynavigatorSaveBtn
             // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(29, 24);
-            this.toolStripButton7.Text = "Save Data";
+            this.InventorynavigatorSaveBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.InventorynavigatorSaveBtn.Image = ((System.Drawing.Image)(resources.GetObject("InventorynavigatorSaveBtn.Image")));
+            this.InventorynavigatorSaveBtn.Name = "InventorynavigatorSaveBtn";
+            this.InventorynavigatorSaveBtn.Size = new System.Drawing.Size(29, 24);
+            this.InventorynavigatorSaveBtn.Text = "Save Data";
+            this.InventorynavigatorSaveBtn.Click += new System.EventHandler(this.InventorynavigatorSaveBtn_Click);
             // 
             // Manage
             // 
@@ -656,6 +659,6 @@ namespace Project
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private System.Windows.Forms.ToolStripButton InventorynavigatorSaveBtn;
     }
 }

@@ -16,6 +16,7 @@ namespace Project
         decimal Price, Rent;
         public carshop()
         {
+            //int ay_bta3 =(int) carsTableAdapter.GetData()[2][0];
             InitializeComponent();
         }
 
@@ -107,6 +108,8 @@ namespace Project
 
         private void purchase_Click(object sender, EventArgs e)
         {
+            //CarProperties AirBag,SunRoof,Gps,Abs,Rear;
+            
             try
             {
                 Price = (decimal)carsTableAdapter.GetPrice(id);
@@ -115,6 +118,7 @@ namespace Project
                 {
                     Price -= ((decimal)0.02 * Price);
                 }
+
                 price.Text = "Total Price: " + Price.ToString("c");
                 price.ForeColor = Color.SpringGreen;
                 this.AcceptButton = confirm;

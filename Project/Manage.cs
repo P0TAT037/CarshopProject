@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace Project
 {
     public partial class Manage : Form
@@ -86,5 +88,31 @@ namespace Project
         {
             this.AcceptButton = userSearchBtn;
         }
+
+        private void InventorynavigatorSaveBtn_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.carsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dataSet);
+        }
+    }
+}
+class CarProperties
+{
+    private string name;
+    private float price;
+    CarProperties()
+    {
+        name = null;
+        price = 0;
+    }
+    CarProperties(string n, float p)
+    {
+        name = n;
+        price = p;
+    }
+    private float Price
+    {
+        get { return price; }
     }
 }

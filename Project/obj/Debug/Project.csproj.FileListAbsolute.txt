@@ -67,7 +67,6 @@ C:\Users\samir\Desktop\samir\College\Event-Driven and reactive Programming\Proje
 C:\Users\lolor\Source\Repos\ProjectIII\Project\bin\Debug\Project.exe.config
 C:\Users\lolor\Source\Repos\ProjectIII\Project\bin\Debug\Project.exe
 C:\Users\lolor\Source\Repos\ProjectIII\Project\bin\Debug\Project.pdb
-C:\Users\lolor\Source\Repos\ProjectIII\Project\obj\Debug\Project.csprojAssemblyReference.cache
 C:\Users\lolor\Source\Repos\ProjectIII\Project\obj\Debug\Project.carshop.resources
 C:\Users\lolor\Source\Repos\ProjectIII\Project\obj\Debug\Project.Manage.resources
 C:\Users\lolor\Source\Repos\ProjectIII\Project\obj\Debug\Project.SignIn.resources
@@ -77,3 +76,4 @@ C:\Users\lolor\Source\Repos\ProjectIII\Project\obj\Debug\Project.csproj.Generate
 C:\Users\lolor\Source\Repos\ProjectIII\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
 C:\Users\lolor\Source\Repos\ProjectIII\Project\obj\Debug\Project.exe
 C:\Users\lolor\Source\Repos\ProjectIII\Project\obj\Debug\Project.pdb
+C:\Users\lolor\source\repos\ProjectIII\Project\obj\Debug\Project.csproj.AssemblyReference.cache

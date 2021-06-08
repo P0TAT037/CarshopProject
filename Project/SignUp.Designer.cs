@@ -65,7 +65,7 @@ namespace Project
             this.cancel.OnHoverButtonColor = System.Drawing.Color.MintCream;
             this.cancel.OnHoverTextColor = System.Drawing.Color.Red;
             this.cancel.Size = new System.Drawing.Size(117, 41);
-            this.cancel.TabIndex = 19;
+            this.cancel.TabIndex = 7;
             this.cancel.Text = "Cancel";
             this.cancel.TextColor = System.Drawing.Color.White;
             this.cancel.UseVisualStyleBackColor = true;
@@ -84,7 +84,7 @@ namespace Project
             this.signUpBtn.OnHoverButtonColor = System.Drawing.Color.MintCream;
             this.signUpBtn.OnHoverTextColor = System.Drawing.Color.LimeGreen;
             this.signUpBtn.Size = new System.Drawing.Size(193, 62);
-            this.signUpBtn.TabIndex = 18;
+            this.signUpBtn.TabIndex = 5;
             this.signUpBtn.Text = "Sign up";
             this.signUpBtn.TextColor = System.Drawing.Color.White;
             this.signUpBtn.UseVisualStyleBackColor = true;
@@ -98,7 +98,7 @@ namespace Project
             this.showPassword.Location = new System.Drawing.Point(231, 409);
             this.showPassword.Name = "showPassword";
             this.showPassword.Size = new System.Drawing.Size(113, 18);
-            this.showPassword.TabIndex = 15;
+            this.showPassword.TabIndex = 5;
             this.showPassword.Text = "show password";
             this.showPassword.UseVisualStyleBackColor = true;
             this.showPassword.CheckedChanged += new System.EventHandler(this.showPassword_CheckedChanged);
@@ -131,7 +131,7 @@ namespace Project
             this.password.Location = new System.Drawing.Point(39, 314);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(327, 26);
-            this.password.TabIndex = 12;
+            this.password.TabIndex = 3;
             // 
             // username
             // 
@@ -139,7 +139,7 @@ namespace Project
             this.username.Location = new System.Drawing.Point(38, 250);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(327, 26);
-            this.username.TabIndex = 11;
+            this.username.TabIndex = 1;
             // 
             // label1
             // 
@@ -158,7 +158,7 @@ namespace Project
             this.name.Location = new System.Drawing.Point(38, 187);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(327, 26);
-            this.name.TabIndex = 1;
+            this.name.TabIndex = 0;
             // 
             // label3
             // 
@@ -177,7 +177,7 @@ namespace Project
             this.confirm.Location = new System.Drawing.Point(39, 377);
             this.confirm.Name = "confirm";
             this.confirm.Size = new System.Drawing.Size(327, 26);
-            this.confirm.TabIndex = 23;
+            this.confirm.TabIndex = 4;
             // 
             // dataSet
             // 

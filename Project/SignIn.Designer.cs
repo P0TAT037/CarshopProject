@@ -94,7 +94,7 @@ namespace Project
             this.showPassword.Location = new System.Drawing.Point(234, 331);
             this.showPassword.Name = "showPassword";
             this.showPassword.Size = new System.Drawing.Size(126, 21);
-            this.showPassword.TabIndex = 6;
+            this.showPassword.TabIndex = 3;
             this.showPassword.Text = "show password";
             this.showPassword.UseVisualStyleBackColor = true;
             this.showPassword.CheckedChanged += new System.EventHandler(this.showPassword_CheckedChanged);
@@ -118,7 +118,7 @@ namespace Project
             this.signUp.Location = new System.Drawing.Point(272, 369);
             this.signUp.Name = "signUp";
             this.signUp.Size = new System.Drawing.Size(64, 21);
-            this.signUp.TabIndex = 8;
+            this.signUp.TabIndex = 4;
             this.signUp.Text = "Sign up";
             this.signUp.Click += new System.EventHandler(this.signUp_Click);
             this.signUp.MouseLeave += new System.EventHandler(this.signUp_MouseLeave);
@@ -138,7 +138,7 @@ namespace Project
             this.exit.OnHoverButtonColor = System.Drawing.Color.MintCream;
             this.exit.OnHoverTextColor = System.Drawing.Color.Red;
             this.exit.Size = new System.Drawing.Size(127, 50);
-            this.exit.TabIndex = 10;
+            this.exit.TabIndex = 6;
             this.exit.Text = "Exit";
             this.exit.TextColor = System.Drawing.Color.White;
             this.exit.UseVisualStyleBackColor = true;
@@ -157,7 +157,7 @@ namespace Project
             this.signInBtn.OnHoverButtonColor = System.Drawing.Color.MintCream;
             this.signInBtn.OnHoverTextColor = System.Drawing.Color.DeepSkyBlue;
             this.signInBtn.Size = new System.Drawing.Size(213, 72);
-            this.signInBtn.TabIndex = 9;
+            this.signInBtn.TabIndex = 5;
             this.signInBtn.Text = "Sign in";
             this.signInBtn.TextColor = System.Drawing.Color.White;
             this.signInBtn.UseVisualStyleBackColor = true;
