@@ -100,18 +100,21 @@ namespace Project
 class CarProperties
 {
     private string name;
-    private float price;
-    CarProperties()
+    private decimal price;
+
+
+    public CarProperties()
     {
         name = null;
         price = 0;
     }
-    CarProperties(string n, float p)
+    public CarProperties(string n, decimal p)
     {
         name = n;
         price = p;
     }
-    private float Price
+
+    public decimal Price
     {
         get { return price; }
     }

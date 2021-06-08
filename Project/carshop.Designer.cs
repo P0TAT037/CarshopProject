@@ -254,7 +254,7 @@ namespace Project
             this.rentBtn.OnHoverButtonColor = System.Drawing.Color.SandyBrown;
             this.rentBtn.OnHoverTextColor = System.Drawing.Color.White;
             this.rentBtn.Size = new System.Drawing.Size(193, 50);
-            this.rentBtn.TabIndex = 5;
+            this.rentBtn.TabIndex = 10;
             this.rentBtn.Text = "Rent";
             this.rentBtn.TextColor = System.Drawing.Color.Snow;
             this.rentBtn.UseVisualStyleBackColor = true;
@@ -274,7 +274,7 @@ namespace Project
             this.exit.OnHoverButtonColor = System.Drawing.Color.DarkRed;
             this.exit.OnHoverTextColor = System.Drawing.Color.White;
             this.exit.Size = new System.Drawing.Size(135, 41);
-            this.exit.TabIndex = 10;
+            this.exit.TabIndex = 15;
             this.exit.Text = "Exit";
             this.exit.TextColor = System.Drawing.Color.WhiteSmoke;
             this.exit.UseVisualStyleBackColor = true;
@@ -294,7 +294,7 @@ namespace Project
             this.manage.OnHoverButtonColor = System.Drawing.Color.SteelBlue;
             this.manage.OnHoverTextColor = System.Drawing.Color.White;
             this.manage.Size = new System.Drawing.Size(135, 41);
-            this.manage.TabIndex = 8;
+            this.manage.TabIndex = 13;
             this.manage.Text = "Manage";
             this.manage.TextColor = System.Drawing.Color.White;
             this.manage.UseVisualStyleBackColor = true;
@@ -316,7 +316,7 @@ namespace Project
             this.LogOut.OnHoverButtonColor = System.Drawing.Color.Maroon;
             this.LogOut.OnHoverTextColor = System.Drawing.Color.White;
             this.LogOut.Size = new System.Drawing.Size(135, 41);
-            this.LogOut.TabIndex = 9;
+            this.LogOut.TabIndex = 14;
             this.LogOut.Text = "Log out";
             this.LogOut.TextColor = System.Drawing.Color.WhiteSmoke;
             this.LogOut.UseVisualStyleBackColor = true;
@@ -336,7 +336,7 @@ namespace Project
             this.purchase.OnHoverButtonColor = System.Drawing.Color.MediumSeaGreen;
             this.purchase.OnHoverTextColor = System.Drawing.Color.White;
             this.purchase.Size = new System.Drawing.Size(193, 50);
-            this.purchase.TabIndex = 4;
+            this.purchase.TabIndex = 9;
             this.purchase.Text = "Purchase";
             this.purchase.TextColor = System.Drawing.Color.Snow;
             this.purchase.UseVisualStyleBackColor = true;
@@ -356,7 +356,7 @@ namespace Project
             this.confirm.OnHoverButtonColor = System.Drawing.Color.MediumSeaGreen;
             this.confirm.OnHoverTextColor = System.Drawing.Color.White;
             this.confirm.Size = new System.Drawing.Size(193, 50);
-            this.confirm.TabIndex = 6;
+            this.confirm.TabIndex = 11;
             this.confirm.Text = "Confirm";
             this.confirm.TextColor = System.Drawing.Color.Snow;
             this.confirm.UseVisualStyleBackColor = true;
@@ -377,7 +377,7 @@ namespace Project
             this.cancel.OnHoverButtonColor = System.Drawing.Color.DarkRed;
             this.cancel.OnHoverTextColor = System.Drawing.Color.White;
             this.cancel.Size = new System.Drawing.Size(193, 50);
-            this.cancel.TabIndex = 7;
+            this.cancel.TabIndex = 12;
             this.cancel.Text = "Cancel";
             this.cancel.TextColor = System.Drawing.Color.WhiteSmoke;
             this.cancel.UseVisualStyleBackColor = true;
@@ -387,50 +387,55 @@ namespace Project
             // AirBag_check
             // 
             this.AirBag_check.AutoSize = true;
+            this.AirBag_check.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.AirBag_check.Location = new System.Drawing.Point(582, 248);
             this.AirBag_check.Name = "AirBag_check";
             this.AirBag_check.Size = new System.Drawing.Size(83, 21);
-            this.AirBag_check.TabIndex = 26;
+            this.AirBag_check.TabIndex = 4;
             this.AirBag_check.Text = "Air Bags";
             this.AirBag_check.UseVisualStyleBackColor = true;
             // 
             // ABS_check
             // 
             this.ABS_check.AutoSize = true;
+            this.ABS_check.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ABS_check.Location = new System.Drawing.Point(719, 248);
             this.ABS_check.Name = "ABS_check";
             this.ABS_check.Size = new System.Drawing.Size(105, 21);
-            this.ABS_check.TabIndex = 27;
+            this.ABS_check.TabIndex = 5;
             this.ABS_check.Text = "ABS Brakes";
             this.ABS_check.UseVisualStyleBackColor = true;
             // 
             // GPS_check
             // 
             this.GPS_check.AutoSize = true;
+            this.GPS_check.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.GPS_check.Location = new System.Drawing.Point(582, 275);
             this.GPS_check.Name = "GPS_check";
             this.GPS_check.Size = new System.Drawing.Size(109, 21);
-            this.GPS_check.TabIndex = 28;
+            this.GPS_check.TabIndex = 6;
             this.GPS_check.Text = "GPS System";
             this.GPS_check.UseVisualStyleBackColor = true;
             // 
             // SunRoof_check
             // 
             this.SunRoof_check.AutoSize = true;
+            this.SunRoof_check.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SunRoof_check.Location = new System.Drawing.Point(719, 275);
             this.SunRoof_check.Name = "SunRoof_check";
             this.SunRoof_check.Size = new System.Drawing.Size(89, 21);
-            this.SunRoof_check.TabIndex = 29;
+            this.SunRoof_check.TabIndex = 7;
             this.SunRoof_check.Text = "Sun Roof";
             this.SunRoof_check.UseVisualStyleBackColor = true;
             // 
             // Rear_check
             // 
             this.Rear_check.AutoSize = true;
+            this.Rear_check.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Rear_check.Location = new System.Drawing.Point(622, 302);
             this.Rear_check.Name = "Rear_check";
             this.Rear_check.Size = new System.Drawing.Size(143, 21);
-            this.Rear_check.TabIndex = 30;
+            this.Rear_check.TabIndex = 8;
             this.Rear_check.Text = "RearView Camera";
             this.Rear_check.UseVisualStyleBackColor = true;
             // 
