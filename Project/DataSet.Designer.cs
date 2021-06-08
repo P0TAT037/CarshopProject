@@ -630,6 +630,8 @@ namespace Project {
             
             private global::System.Data.DataColumn columnrent_price;
             
+            private global::System.Data.DataColumn columnquantity;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public CarsDataTable() {
@@ -705,6 +707,14 @@ namespace Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn quantityColumn {
+                get {
+                    return this.columnquantity;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -740,14 +750,15 @@ namespace Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CarsRow AddCarsRow(string brand, string model, decimal price, decimal rent_price) {
+            public CarsRow AddCarsRow(string brand, string model, decimal price, decimal rent_price, int quantity) {
                 CarsRow rowCarsRow = ((CarsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         brand,
                         model,
                         price,
-                        rent_price};
+                        rent_price,
+                        quantity};
                 rowCarsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCarsRow);
                 return rowCarsRow;
@@ -782,6 +793,7 @@ namespace Project {
                 this.columnmodel = base.Columns["model"];
                 this.columnprice = base.Columns["price"];
                 this.columnrent_price = base.Columns["rent price"];
+                this.columnquantity = base.Columns["quantity"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -797,6 +809,8 @@ namespace Project {
                 base.Columns.Add(this.columnprice);
                 this.columnrent_price = new global::System.Data.DataColumn("rent price", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnrent_price);
+                this.columnquantity = new global::System.Data.DataColumn("quantity", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnquantity);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("CarsKey", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -811,6 +825,7 @@ namespace Project {
                 this.columnmodel.MaxLength = 50;
                 this.columnprice.AllowDBNull = false;
                 this.columnrent_price.AllowDBNull = false;
+                this.columnquantity.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1062,6 +1077,17 @@ namespace Project {
                 }
                 set {
                     this[this.tableCars.rent_priceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int quantity {
+                get {
+                    return ((int)(this[this.tableCars.quantityColumn]));
+                }
+                set {
+                    this[this.tableCars.quantityColumn] = value;
                 }
             }
         }
@@ -1806,42 +1832,47 @@ SELECT username, password, name, admin FROM Accounts WHERE (username = @username
             tableMapping.ColumnMappings.Add("model", "model");
             tableMapping.ColumnMappings.Add("price", "price");
             tableMapping.ColumnMappings.Add("rent price", "rent price");
+            tableMapping.ColumnMappings.Add("quantity", "quantity");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM [Cars] WHERE (([id] = @Original_id) AND ([brand] = @Original_brand) A" +
                 "ND ([model] = @Original_model) AND ([price] = @Original_price) AND ([rent price]" +
-                " = @Original_rent_price))";
+                " = @Original_rent_price) AND ([quantity] = @Original_quantity))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_brand", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "brand", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_model", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "model", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_rent_price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rent price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "quantity", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [Cars] ([brand], [model], [price], [rent price]) VALUES (@brand, @mod" +
-                "el, @price, @rent_price);\r\nSELECT id, brand, model, price, [rent price] FROM Car" +
-                "s WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Cars] ([brand], [model], [price], [rent price], [quantity]) VALUES (" +
+                "@brand, @model, @price, @rent_price, @quantity);\r\nSELECT id, brand, model, price" +
+                ", [rent price], quantity FROM Cars WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@brand", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "brand", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@model", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "model", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rent_price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rent price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "quantity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Cars] SET [brand] = @brand, [model] = @model, [price] = @price, [rent price] = @rent_price WHERE (([id] = @Original_id) AND ([brand] = @Original_brand) AND ([model] = @Original_model) AND ([price] = @Original_price) AND ([rent price] = @Original_rent_price));
-SELECT id, brand, model, price, [rent price] FROM Cars WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Cars] SET [brand] = @brand, [model] = @model, [price] = @price, [rent price] = @rent_price, [quantity] = @quantity WHERE (([id] = @Original_id) AND ([brand] = @Original_brand) AND ([model] = @Original_model) AND ([price] = @Original_price) AND ([rent price] = @Original_rent_price) AND ([quantity] = @Original_quantity));
+SELECT id, brand, model, price, [rent price], quantity FROM Cars WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@brand", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "brand", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@model", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "model", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rent_price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rent price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "quantity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_brand", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "brand", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_model", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "model", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_rent_price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rent price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "quantity", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -1855,38 +1886,45 @@ SELECT id, brand, model, price, [rent price] FROM Cars WHERE (id = @id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[6];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[7];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, brand, model, price, [rent price] FROM Cars";
+            this._commandCollection[0].CommandText = "SELECT id, brand, model, price, [rent price], quantity FROM Cars";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT model, id, brand, price, [rent price] FROM Cars WHERE (brand = @brand)";
+            this._commandCollection[1].CommandText = "SELECT model, id, brand, price, [rent price], quantity FROM Cars WHERE (brand = @" +
+                "brand)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@brand", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "brand", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT id\r\nFROM     Cars\r\nWHERE  (brand = @brand) AND (model = @model)";
+            this._commandCollection[2].CommandText = "SELECT id, quantity FROM Cars WHERE (brand = @brand) AND (model = @model)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@brand", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "brand", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@model", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "model", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT price, [rent price] FROM Cars WHERE (id = @id)";
+            this._commandCollection[3].CommandText = "SELECT price, [rent price], quantity FROM Cars WHERE (id = @id)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "SELECT [rent price]\r\nFROM     Cars\r\nWHERE  (id = @id)";
+            this._commandCollection[4].CommandText = "SELECT [rent price], quantity FROM Cars WHERE (id = @id)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = "SELECT id, brand, model, price, [rent price]\r\nFROM     Cars\r\nWHERE  (brand LIKE \'" +
-                "%\' + @param + \'%\') OR\r\n                  (model LIKE \'%\' + @param + \'%\')";
+            this._commandCollection[5].CommandText = "SELECT id, brand, model, price, [rent price], quantity FROM Cars WHERE (brand LIK" +
+                "E \'%\' + @param + \'%\') OR (model LIKE \'%\' + @param + \'%\')";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@param", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "brand", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[6].Connection = this.Connection;
+            this._commandCollection[6].CommandText = "UPDATE Cars\r\nSET          quantity = quantity - 1\r\nWHERE  (id = @id);  \r\nSELECT i" +
+                "d, brand, model, price, [rent price], quantity FROM Cars WHERE (id = @id)";
+            this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2001,7 +2039,7 @@ SELECT id, brand, model, price, [rent price] FROM Cars WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, string Original_brand, string Original_model, decimal Original_price, decimal Original_rent_price) {
+        public virtual int Delete(int Original_id, string Original_brand, string Original_model, decimal Original_price, decimal Original_rent_price, int Original_quantity) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
             if ((Original_brand == null)) {
                 throw new global::System.ArgumentNullException("Original_brand");
@@ -2017,6 +2055,7 @@ SELECT id, brand, model, price, [rent price] FROM Cars WHERE (id = @id)";
             }
             this.Adapter.DeleteCommand.Parameters[3].Value = ((decimal)(Original_price));
             this.Adapter.DeleteCommand.Parameters[4].Value = ((decimal)(Original_rent_price));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_quantity));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2037,7 +2076,7 @@ SELECT id, brand, model, price, [rent price] FROM Cars WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string brand, string model, decimal price, decimal rent_price) {
+        public virtual int Insert(string brand, string model, decimal price, decimal rent_price, int quantity) {
             if ((brand == null)) {
                 throw new global::System.ArgumentNullException("brand");
             }
@@ -2052,6 +2091,7 @@ SELECT id, brand, model, price, [rent price] FROM Cars WHERE (id = @id)";
             }
             this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(price));
             this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(rent_price));
+            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(quantity));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2072,7 +2112,7 @@ SELECT id, brand, model, price, [rent price] FROM Cars WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string brand, string model, decimal price, decimal rent_price, int Original_id, string Original_brand, string Original_model, decimal Original_price, decimal Original_rent_price, int id) {
+        public virtual int Update(string brand, string model, decimal price, decimal rent_price, int quantity, int Original_id, string Original_brand, string Original_model, decimal Original_price, decimal Original_rent_price, int Original_quantity, int id) {
             if ((brand == null)) {
                 throw new global::System.ArgumentNullException("brand");
             }
@@ -2087,22 +2127,24 @@ SELECT id, brand, model, price, [rent price] FROM Cars WHERE (id = @id)";
             }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(price));
             this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(rent_price));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_id));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(quantity));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_id));
             if ((Original_brand == null)) {
                 throw new global::System.ArgumentNullException("Original_brand");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_brand));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_brand));
             }
             if ((Original_model == null)) {
                 throw new global::System.ArgumentNullException("Original_model");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_model));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_model));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(Original_price));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((decimal)(Original_rent_price));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(id));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((decimal)(Original_price));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(Original_rent_price));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_quantity));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2123,8 +2165,8 @@ SELECT id, brand, model, price, [rent price] FROM Cars WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string brand, string model, decimal price, decimal rent_price, int Original_id, string Original_brand, string Original_model, decimal Original_price, decimal Original_rent_price) {
-            return this.Update(brand, model, price, rent_price, Original_id, Original_brand, Original_model, Original_price, Original_rent_price, Original_id);
+        public virtual int Update(string brand, string model, decimal price, decimal rent_price, int quantity, int Original_id, string Original_brand, string Original_model, decimal Original_price, decimal Original_rent_price, int Original_quantity) {
+            return this.Update(brand, model, price, rent_price, quantity, Original_id, Original_brand, Original_model, Original_price, Original_rent_price, Original_quantity, Original_id);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2223,6 +2265,30 @@ SELECT id, brand, model, price, [rent price] FROM Cars WHERE (id = @id)";
             else {
                 return new global::System.Nullable<decimal>(((decimal)(returnValue)));
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateStock(int id) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[6];
+            command.Parameters[0].Value = ((int)(id));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

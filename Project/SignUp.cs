@@ -23,8 +23,16 @@ namespace Project
 
         private void showPassword_CheckedChanged(object sender, EventArgs e)
         {
-            methods.showPasswordCheck(password, showPassword);
-            methods.showPasswordCheck(confirm, showPassword);
+            if (showPassword.Checked)
+            {
+                password.UseSystemPasswordChar = false;
+                confirm.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                password.UseSystemPasswordChar = true;
+                confirm.UseSystemPasswordChar = true;
+            }
         }
 
         private void cancel_Click(object sender, EventArgs e)

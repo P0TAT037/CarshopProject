@@ -47,8 +47,6 @@ E:\College\Year 2\Semester 2\Event driven & Reactive programming\project\Project
 E:\College\Year 2\Semester 2\Event driven & Reactive programming\project\ProjectII\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
 E:\College\Year 2\Semester 2\Event driven & Reactive programming\project\ProjectII\Project\obj\Debug\Project.exe
 E:\College\Year 2\Semester 2\Event driven & Reactive programming\project\ProjectII\Project\obj\Debug\Project.pdb
-E:\College\Year 2\Semester 2\Event driven & Reactive programming\project\ProjectII\Project\bin\Debug\Database.mdf
-E:\College\Year 2\Semester 2\Event driven & Reactive programming\project\ProjectII\Project\bin\Debug\Database_log.ldf
 C:\Users\samir\Desktop\samir\College\Event-Driven and reactive Programming\Projects\lastUpdate\Project\bin\Debug\Database.mdf
 C:\Users\samir\Desktop\samir\College\Event-Driven and reactive Programming\Projects\lastUpdate\Project\bin\Debug\Database_log.ldf
 C:\Users\samir\Desktop\samir\College\Event-Driven and reactive Programming\Projects\lastUpdate\Project\bin\Debug\Project.exe.config

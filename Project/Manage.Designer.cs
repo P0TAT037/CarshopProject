@@ -51,10 +51,6 @@ namespace Project
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.carsDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.carsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userSearch = new System.Windows.Forms.TextBox();
             this.carSearch = new System.Windows.Forms.TextBox();
@@ -79,6 +75,11 @@ namespace Project
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.InventorynavigatorSaveBtn = new System.Windows.Forms.ToolStripButton();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingNavigator)).BeginInit();
             this.accountsBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).BeginInit();
@@ -96,7 +97,7 @@ namespace Project
             this.name.AutoSize = true;
             this.name.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.name.Location = new System.Drawing.Point(63, 19);
+            this.name.Location = new System.Drawing.Point(55, 19);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(64, 24);
             this.name.TabIndex = 26;
@@ -107,7 +108,7 @@ namespace Project
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(709, 82);
+            this.label1.Location = new System.Drawing.Point(620, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(152, 24);
             this.label1.TabIndex = 28;
@@ -118,7 +119,7 @@ namespace Project
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(9, 82);
+            this.label2.Location = new System.Drawing.Point(8, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 24);
             this.label2.TabIndex = 29;
@@ -144,14 +145,14 @@ namespace Project
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.accountsBindingNavigatorSaveItem});
-            this.accountsBindingNavigator.Location = new System.Drawing.Point(749, 413);
+            this.accountsBindingNavigator.Location = new System.Drawing.Point(655, 413);
             this.accountsBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.accountsBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.accountsBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.accountsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.accountsBindingNavigator.Name = "accountsBindingNavigator";
             this.accountsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.accountsBindingNavigator.Size = new System.Drawing.Size(270, 27);
+            this.accountsBindingNavigator.Size = new System.Drawing.Size(263, 27);
             this.accountsBindingNavigator.TabIndex = 30;
             this.accountsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -199,9 +200,8 @@ namespace Project
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(57, 27);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
@@ -252,11 +252,11 @@ namespace Project
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewCheckBoxColumn1});
             this.accountsDataGridView.DataSource = this.accountsBindingSource;
-            this.accountsDataGridView.Location = new System.Drawing.Point(694, 139);
+            this.accountsDataGridView.Location = new System.Drawing.Point(607, 139);
             this.accountsDataGridView.Name = "accountsDataGridView";
             this.accountsDataGridView.RowHeadersWidth = 51;
             this.accountsDataGridView.RowTemplate.Height = 26;
-            this.accountsDataGridView.Size = new System.Drawing.Size(378, 271);
+            this.accountsDataGridView.Size = new System.Drawing.Size(331, 271);
             this.accountsDataGridView.TabIndex = 30;
             // 
             // dataGridViewTextBoxColumn1
@@ -282,6 +282,7 @@ namespace Project
             this.carsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
+            this.quantity,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.carsDataGridView.DataSource = this.carsBindingSource;
@@ -289,40 +290,8 @@ namespace Project
             this.carsDataGridView.Name = "carsDataGridView";
             this.carsDataGridView.RowHeadersWidth = 51;
             this.carsDataGridView.RowTemplate.Height = 26;
-            this.carsDataGridView.Size = new System.Drawing.Size(694, 271);
+            this.carsDataGridView.Size = new System.Drawing.Size(607, 271);
             this.carsDataGridView.TabIndex = 30;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "brand";
-            this.dataGridViewTextBoxColumn5.HeaderText = "brand";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "model";
-            this.dataGridViewTextBoxColumn6.HeaderText = "model";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "price";
-            this.dataGridViewTextBoxColumn7.HeaderText = "price";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "rent price";
-            this.dataGridViewTextBoxColumn8.HeaderText = "rent price";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 125;
             // 
             // carsBindingSource
             // 
@@ -333,9 +302,9 @@ namespace Project
             // 
             this.userSearch.BackColor = System.Drawing.Color.DimGray;
             this.userSearch.ForeColor = System.Drawing.SystemColors.Control;
-            this.userSearch.Location = new System.Drawing.Point(789, 110);
+            this.userSearch.Location = new System.Drawing.Point(690, 110);
             this.userSearch.Name = "userSearch";
-            this.userSearch.Size = new System.Drawing.Size(234, 22);
+            this.userSearch.Size = new System.Drawing.Size(205, 24);
             this.userSearch.TabIndex = 2;
             this.userSearch.TextChanged += new System.EventHandler(this.userSearch_TextChanged);
             // 
@@ -343,9 +312,9 @@ namespace Project
             // 
             this.carSearch.BackColor = System.Drawing.Color.DimGray;
             this.carSearch.ForeColor = System.Drawing.SystemColors.Control;
-            this.carSearch.Location = new System.Drawing.Point(383, 109);
+            this.carSearch.Location = new System.Drawing.Point(335, 109);
             this.carSearch.Name = "carSearch";
-            this.carSearch.Size = new System.Drawing.Size(241, 22);
+            this.carSearch.Size = new System.Drawing.Size(211, 24);
             this.carSearch.TabIndex = 0;
             this.carSearch.TextChanged += new System.EventHandler(this.carSearch_TextChanged);
             // 
@@ -353,9 +322,9 @@ namespace Project
             // 
             this.userSearchBtn.BackgroundImage = global::Project.Properties.Resources.glass;
             this.userSearchBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userSearchBtn.Location = new System.Drawing.Point(1030, 109);
+            this.userSearchBtn.Location = new System.Drawing.Point(901, 109);
             this.userSearchBtn.Name = "userSearchBtn";
-            this.userSearchBtn.Size = new System.Drawing.Size(34, 25);
+            this.userSearchBtn.Size = new System.Drawing.Size(30, 25);
             this.userSearchBtn.TabIndex = 3;
             this.userSearchBtn.UseVisualStyleBackColor = true;
             this.userSearchBtn.Click += new System.EventHandler(this.userSearchBtn_Click);
@@ -367,13 +336,13 @@ namespace Project
             this.exit.FlatAppearance.BorderSize = 0;
             this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exit.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exit.Location = new System.Drawing.Point(865, 463);
+            this.exit.Location = new System.Drawing.Point(757, 463);
             this.exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.exit.Name = "exit";
             this.exit.OnHoverBorderColor = System.Drawing.Color.WhiteSmoke;
             this.exit.OnHoverButtonColor = System.Drawing.Color.Maroon;
             this.exit.OnHoverTextColor = System.Drawing.Color.White;
-            this.exit.Size = new System.Drawing.Size(193, 50);
+            this.exit.Size = new System.Drawing.Size(169, 50);
             this.exit.TabIndex = 5;
             this.exit.Text = "Exit";
             this.exit.TextColor = System.Drawing.Color.WhiteSmoke;
@@ -388,13 +357,13 @@ namespace Project
             this.back.FlatAppearance.BorderSize = 0;
             this.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.back.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.back.Location = new System.Drawing.Point(14, 463);
+            this.back.Location = new System.Drawing.Point(12, 463);
             this.back.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.back.Name = "back";
             this.back.OnHoverBorderColor = System.Drawing.Color.White;
             this.back.OnHoverButtonColor = System.Drawing.Color.SteelBlue;
             this.back.OnHoverTextColor = System.Drawing.Color.White;
-            this.back.Size = new System.Drawing.Size(193, 50);
+            this.back.Size = new System.Drawing.Size(169, 50);
             this.back.TabIndex = 4;
             this.back.Text = "Back";
             this.back.TextColor = System.Drawing.Color.Snow;
@@ -420,9 +389,9 @@ namespace Project
             // 
             this.carSearchBtn.BackgroundImage = global::Project.Properties.Resources.glass;
             this.carSearchBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.carSearchBtn.Location = new System.Drawing.Point(631, 109);
+            this.carSearchBtn.Location = new System.Drawing.Point(552, 109);
             this.carSearchBtn.Name = "carSearchBtn";
-            this.carSearchBtn.Size = new System.Drawing.Size(34, 25);
+            this.carSearchBtn.Size = new System.Drawing.Size(30, 25);
             this.carSearchBtn.TabIndex = 1;
             this.carSearchBtn.UseVisualStyleBackColor = true;
             this.carSearchBtn.Click += new System.EventHandler(this.carSearchBtn_Click);
@@ -430,10 +399,10 @@ namespace Project
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Project.Properties.Resources._138_1388270_transparent_user_png_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(-23, -3);
+            this.pictureBox1.Location = new System.Drawing.Point(-20, -3);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(112, 60);
+            this.pictureBox1.Size = new System.Drawing.Size(98, 60);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
@@ -460,14 +429,14 @@ namespace Project
             this.toolStripButton1,
             this.toolStripButton2,
             this.InventorynavigatorSaveBtn});
-            this.bindingNavigator1.Location = new System.Drawing.Point(153, 413);
+            this.bindingNavigator1.Location = new System.Drawing.Point(134, 413);
             this.bindingNavigator1.MoveFirstItem = this.toolStripButton3;
             this.bindingNavigator1.MoveLastItem = this.toolStripButton6;
             this.bindingNavigator1.MoveNextItem = this.toolStripButton5;
             this.bindingNavigator1.MovePreviousItem = this.toolStripButton4;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.toolStripTextBox1;
-            this.bindingNavigator1.Size = new System.Drawing.Size(367, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(321, 27);
             this.bindingNavigator1.TabIndex = 35;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -523,9 +492,8 @@ namespace Project
             // 
             this.toolStripTextBox1.AccessibleName = "Position";
             this.toolStripTextBox1.AutoSize = false;
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(57, 27);
+            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 27);
             this.toolStripTextBox1.Text = "0";
             this.toolStripTextBox1.ToolTipText = "Current position";
             // 
@@ -566,14 +534,54 @@ namespace Project
             this.InventorynavigatorSaveBtn.Text = "Save Data";
             this.InventorynavigatorSaveBtn.Click += new System.EventHandler(this.InventorynavigatorSaveBtn_Click);
             // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "brand";
+            this.dataGridViewTextBoxColumn5.HeaderText = "brand";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "model";
+            this.dataGridViewTextBoxColumn6.HeaderText = "model";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 125;
+            // 
+            // quantity
+            // 
+            this.quantity.DataPropertyName = "quantity";
+            this.quantity.HeaderText = "quantity";
+            this.quantity.MinimumWidth = 6;
+            this.quantity.Name = "quantity";
+            this.quantity.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "price";
+            this.dataGridViewTextBoxColumn7.HeaderText = "price";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "rent price";
+            this.dataGridViewTextBoxColumn8.HeaderText = "rent price";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 125;
+            // 
             // Manage
             // 
             this.AcceptButton = this.carSearchBtn;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.CancelButton = this.back;
-            this.ClientSize = new System.Drawing.Size(1072, 524);
+            this.ClientSize = new System.Drawing.Size(938, 524);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.carSearchBtn);
             this.Controls.Add(this.userSearchBtn);
@@ -639,10 +647,6 @@ namespace Project
         private System.Windows.Forms.DataGridView carsDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.TextBox userSearch;
         private System.Windows.Forms.TextBox carSearch;
         private System.Windows.Forms.Button userSearchBtn;
@@ -660,5 +664,10 @@ namespace Project
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton InventorynavigatorSaveBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }

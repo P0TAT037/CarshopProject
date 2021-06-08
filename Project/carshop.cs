@@ -81,7 +81,7 @@ namespace Project
             rentBtn.Visible = true;
             confirm.Visible = false;
             price.Visible = false;
-            
+            carsTableAdapter.UpdateStock(id);
         }
 
         private void cancel_Click(object sender, EventArgs e)

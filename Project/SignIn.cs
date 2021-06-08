@@ -24,8 +24,15 @@ namespace Project
         
         private void showPassword_CheckedChanged(object sender, EventArgs e)
         {
-            methods.showPasswordCheck(password, showPassword);
-            
+            if (showPassword.Checked)
+            {
+                password.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                password.UseSystemPasswordChar = true;
+            }
+
         }
 
         private void signUp_Click(object sender, EventArgs e)
@@ -77,18 +84,4 @@ namespace Project
         
     }
 
-    class methods
-    {
-        public static void showPasswordCheck(TextBox t, CheckBox c)
-        {
-            if (c.Checked)
-            {
-                t.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                t.UseSystemPasswordChar = true;
-            }
-        }
-    }
 }
