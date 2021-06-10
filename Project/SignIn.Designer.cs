@@ -30,8 +30,8 @@ namespace Project
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.username = new System.Windows.Forms.TextBox();
-            this.password = new System.Windows.Forms.TextBox();
+            this.TxtUsername = new System.Windows.Forms.TextBox();
+            this.TxtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.showPassword = new System.Windows.Forms.CheckBox();
@@ -49,21 +49,21 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // username
+            // TxtUsername
             // 
-            this.username.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.Location = new System.Drawing.Point(48, 222);
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(327, 32);
-            this.username.TabIndex = 0;
+            this.TxtUsername.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUsername.Location = new System.Drawing.Point(48, 222);
+            this.TxtUsername.Name = "TxtUsername";
+            this.TxtUsername.Size = new System.Drawing.Size(327, 32);
+            this.TxtUsername.TabIndex = 0;
             // 
-            // password
+            // TxtPassword
             // 
-            this.password.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password.Location = new System.Drawing.Point(48, 293);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(327, 32);
-            this.password.TabIndex = 1;
+            this.TxtPassword.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPassword.Location = new System.Drawing.Point(48, 293);
+            this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.Size = new System.Drawing.Size(327, 32);
+            this.TxtPassword.TabIndex = 1;
             // 
             // label1
             // 
@@ -209,8 +209,8 @@ namespace Project
             this.Controls.Add(this.showPassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.password);
-            this.Controls.Add(this.username);
+            this.Controls.Add(this.TxtPassword);
+            this.Controls.Add(this.TxtUsername);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SignIn";
@@ -225,7 +225,7 @@ namespace Project
         }
 
         #endregion
-        private System.Windows.Forms.TextBox password;
+        private System.Windows.Forms.TextBox TxtPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox showPassword;
@@ -238,7 +238,7 @@ namespace Project
         private System.Windows.Forms.BindingSource accountsBindingSource;
         private DataSetTableAdapters.AccountsTableAdapter accountsTableAdapter;
         private DataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.TextBox username;
+        private System.Windows.Forms.TextBox TxtUsername;
     }
 }
 

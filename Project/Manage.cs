@@ -34,7 +34,7 @@ namespace Project
 
         private void Manage_Load(object sender, EventArgs e)
         {
-            name.Text = accountsTableAdapter.getName(SignIn.userName);
+            nameLbl.Text = accountsTableAdapter.getName(SignIn.userName);
             this.carsTableAdapter.Fill(this.dataSet.Cars);
             this.accountsTableAdapter.Fill(this.dataSet.Accounts);
 
@@ -58,26 +58,26 @@ namespace Project
         //Searches the car table
         private void carSearchBtn_Click(object sender, EventArgs e)
         {
-            if (carSearch.Text == string.Empty)
+            if (TxtcarSearch.Text == string.Empty)
             {
                 carsTableAdapter.Fill(this.dataSet.Cars);
             }
             else
             {
-                carsTableAdapter.SearchCars(this.dataSet.Cars, carSearch.Text);
+                carsTableAdapter.SearchCars(this.dataSet.Cars, TxtcarSearch.Text);
             }
         }
 
         //Searches the users table
         private void userSearchBtn_Click(object sender, EventArgs e)
         {
-            if (userSearch.Text == string.Empty)
+            if (TxtuserSearch.Text == string.Empty)
             {
                 accountsTableAdapter.Fill(this.dataSet.Accounts);
             }
             else
             {
-                accountsTableAdapter.SearchUsers(this.dataSet.Accounts, userSearch.Text);
+                accountsTableAdapter.SearchUsers(this.dataSet.Accounts, TxtuserSearch.Text);
             }
         }
 

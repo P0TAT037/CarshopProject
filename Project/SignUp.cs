@@ -17,21 +17,21 @@ namespace Project
         public SignUp()
         {
             InitializeComponent();
-            password.UseSystemPasswordChar = true;
-            confirm.UseSystemPasswordChar = true;
+            TxtPassword.UseSystemPasswordChar = true;
+            TxtConfirm.UseSystemPasswordChar = true;
         }
 
         private void showPassword_CheckedChanged(object sender, EventArgs e)
         {
             if (showPassword.Checked) //Hides the password 
             {
-                password.UseSystemPasswordChar = false;
-                confirm.UseSystemPasswordChar = false;
+                TxtPassword.UseSystemPasswordChar = false;
+                TxtConfirm.UseSystemPasswordChar = false;
             }
             else
             {
-                password.UseSystemPasswordChar = true;
-                confirm.UseSystemPasswordChar = true;
+                TxtPassword.UseSystemPasswordChar = true;
+                TxtConfirm.UseSystemPasswordChar = true;
             }
         }
 
@@ -44,15 +44,15 @@ namespace Project
 
         private void signUpBtn_Click(object sender, EventArgs e)
         {
-            if (password.Text == confirm.Text)
+            if (TxtPassword.Text == TxtConfirm.Text)
             {
                 string Name = null;
-                if(name.Text != string.Empty)
+                if(TxtName.Text != string.Empty)
                 {
-                    Name = name.Text;
+                    Name = TxtName.Text;
                     try
                     {
-                        accountsTableAdapter.addUser(username.Text, password.Text, Name);
+                        accountsTableAdapter.addUser(TxtUsername.Text, TxtPassword.Text, Name);
                         SignIn signIn = new SignIn();
                         MessageBox.Show("Success! You can now sign in.");
                         signIn.Show();

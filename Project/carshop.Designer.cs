@@ -30,16 +30,16 @@ namespace Project
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.name = new System.Windows.Forms.Label();
+            this.nameLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.brand = new System.Windows.Forms.ComboBox();
-            this.model = new System.Windows.Forms.ComboBox();
-            this.year = new System.Windows.Forms.ComboBox();
-            this.transmission = new System.Windows.Forms.ComboBox();
-            this.price = new System.Windows.Forms.Label();
+            this.brandCombo = new System.Windows.Forms.ComboBox();
+            this.modelCombo = new System.Windows.Forms.ComboBox();
+            this.yearCombo = new System.Windows.Forms.ComboBox();
+            this.transmissionCombo = new System.Windows.Forms.ComboBox();
+            this.priceLbl = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.carsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet = new Project.DataSet();
@@ -48,12 +48,12 @@ namespace Project
             this.tableAdapterManager = new Project.DataSetTableAdapters.TableAdapterManager();
             this.carsTableAdapter = new Project.DataSetTableAdapters.CarsTableAdapter();
             this.rentBtn = new ePOSOne.btnProduct.Button_WOC();
-            this.exit = new ePOSOne.btnProduct.Button_WOC();
-            this.manage = new ePOSOne.btnProduct.Button_WOC();
-            this.LogOut = new ePOSOne.btnProduct.Button_WOC();
+            this.ExitBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.manageBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.LogOutBtn = new ePOSOne.btnProduct.Button_WOC();
             this.purchaseBtn = new ePOSOne.btnProduct.Button_WOC();
-            this.confirm = new ePOSOne.btnProduct.Button_WOC();
-            this.cancel = new ePOSOne.btnProduct.Button_WOC();
+            this.confirmBtn = new ePOSOne.btnProduct.Button_WOC();
+            this.cancelBtn = new ePOSOne.btnProduct.Button_WOC();
             this.AirBag_check = new System.Windows.Forms.CheckBox();
             this.ABS_check = new System.Windows.Forms.CheckBox();
             this.GPS_check = new System.Windows.Forms.CheckBox();
@@ -67,16 +67,16 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // name
+            // nameLbl
             // 
-            this.name.AutoSize = true;
-            this.name.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.name.Location = new System.Drawing.Point(70, 18);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(64, 24);
-            this.name.TabIndex = 0;
-            this.name.Text = "NAME";
+            this.nameLbl.AutoSize = true;
+            this.nameLbl.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.nameLbl.Location = new System.Drawing.Point(70, 18);
+            this.nameLbl.Name = "nameLbl";
+            this.nameLbl.Size = new System.Drawing.Size(64, 24);
+            this.nameLbl.TabIndex = 0;
+            this.nameLbl.Text = "NAME";
             // 
             // label1
             // 
@@ -122,84 +122,84 @@ namespace Project
             this.label4.TabIndex = 4;
             this.label4.Text = "Transmission";
             // 
-            // brand
+            // brandCombo
             // 
-            this.brand.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.brand.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.brand.BackColor = System.Drawing.Color.DimGray;
-            this.brand.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brand.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.brand.FormattingEnabled = true;
-            this.brand.Location = new System.Drawing.Point(219, 113);
-            this.brand.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.brand.Name = "brand";
-            this.brand.Size = new System.Drawing.Size(204, 29);
-            this.brand.TabIndex = 0;
-            this.brand.SelectedIndexChanged += new System.EventHandler(this.brand_SelectedIndexChanged);
+            this.brandCombo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.brandCombo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.brandCombo.BackColor = System.Drawing.Color.DimGray;
+            this.brandCombo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brandCombo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.brandCombo.FormattingEnabled = true;
+            this.brandCombo.Location = new System.Drawing.Point(219, 113);
+            this.brandCombo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.brandCombo.Name = "brandCombo";
+            this.brandCombo.Size = new System.Drawing.Size(204, 29);
+            this.brandCombo.TabIndex = 0;
+            this.brandCombo.SelectedIndexChanged += new System.EventHandler(this.brand_SelectedIndexChanged);
             // 
-            // model
+            // modelCombo
             // 
-            this.model.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.model.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.model.BackColor = System.Drawing.Color.DimGray;
-            this.model.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.model.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.model.FormattingEnabled = true;
-            this.model.Location = new System.Drawing.Point(219, 175);
-            this.model.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.model.Name = "model";
-            this.model.Size = new System.Drawing.Size(204, 29);
-            this.model.TabIndex = 1;
-            this.model.SelectedIndexChanged += new System.EventHandler(this.model_SelectedIndexChanged);
+            this.modelCombo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.modelCombo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.modelCombo.BackColor = System.Drawing.Color.DimGray;
+            this.modelCombo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modelCombo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.modelCombo.FormattingEnabled = true;
+            this.modelCombo.Location = new System.Drawing.Point(219, 175);
+            this.modelCombo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.modelCombo.Name = "modelCombo";
+            this.modelCombo.Size = new System.Drawing.Size(204, 29);
+            this.modelCombo.TabIndex = 1;
+            this.modelCombo.SelectedIndexChanged += new System.EventHandler(this.model_SelectedIndexChanged);
             // 
-            // year
+            // yearCombo
             // 
-            this.year.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.year.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.year.BackColor = System.Drawing.Color.DimGray;
-            this.year.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.year.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.year.FormattingEnabled = true;
-            this.year.Items.AddRange(new object[] {
+            this.yearCombo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.yearCombo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.yearCombo.BackColor = System.Drawing.Color.DimGray;
+            this.yearCombo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yearCombo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.yearCombo.FormattingEnabled = true;
+            this.yearCombo.Items.AddRange(new object[] {
             "2021",
             "2020",
             "2019",
             "2018",
             "2017"});
-            this.year.Location = new System.Drawing.Point(219, 235);
-            this.year.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.year.Name = "year";
-            this.year.Size = new System.Drawing.Size(204, 29);
-            this.year.TabIndex = 2;
+            this.yearCombo.Location = new System.Drawing.Point(219, 235);
+            this.yearCombo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.yearCombo.Name = "yearCombo";
+            this.yearCombo.Size = new System.Drawing.Size(204, 29);
+            this.yearCombo.TabIndex = 2;
             // 
-            // transmission
+            // transmissionCombo
             // 
-            this.transmission.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.transmission.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.transmission.BackColor = System.Drawing.Color.DimGray;
-            this.transmission.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.transmission.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.transmission.FormattingEnabled = true;
-            this.transmission.Items.AddRange(new object[] {
+            this.transmissionCombo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.transmissionCombo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.transmissionCombo.BackColor = System.Drawing.Color.DimGray;
+            this.transmissionCombo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transmissionCombo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.transmissionCombo.FormattingEnabled = true;
+            this.transmissionCombo.Items.AddRange(new object[] {
             "Automatic",
             "Manual"});
-            this.transmission.Location = new System.Drawing.Point(219, 293);
-            this.transmission.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.transmission.Name = "transmission";
-            this.transmission.Size = new System.Drawing.Size(204, 29);
-            this.transmission.TabIndex = 3;
+            this.transmissionCombo.Location = new System.Drawing.Point(219, 293);
+            this.transmissionCombo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.transmissionCombo.Name = "transmissionCombo";
+            this.transmissionCombo.Size = new System.Drawing.Size(204, 29);
+            this.transmissionCombo.TabIndex = 3;
             // 
-            // price
+            // priceLbl
             // 
-            this.price.AutoSize = true;
-            this.price.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price.ForeColor = System.Drawing.Color.SpringGreen;
-            this.price.Location = new System.Drawing.Point(357, 53);
-            this.price.Name = "price";
-            this.price.Size = new System.Drawing.Size(117, 36);
-            this.price.TabIndex = 23;
-            this.price.Text = "Total Price";
-            this.price.Visible = false;
+            this.priceLbl.AutoSize = true;
+            this.priceLbl.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.priceLbl.ForeColor = System.Drawing.Color.SpringGreen;
+            this.priceLbl.Location = new System.Drawing.Point(357, 53);
+            this.priceLbl.Name = "priceLbl";
+            this.priceLbl.Size = new System.Drawing.Size(117, 36);
+            this.priceLbl.TabIndex = 23;
+            this.priceLbl.Text = "Total Price";
+            this.priceLbl.Visible = false;
             // 
             // pictureBox1
             // 
@@ -262,67 +262,67 @@ namespace Project
             this.rentBtn.UseVisualStyleBackColor = true;
             this.rentBtn.Click += new System.EventHandler(this.rentBtn_Click);
             // 
-            // exit
+            // ExitBtn
             // 
-            this.exit.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.exit.ButtonColor = System.Drawing.Color.DimGray;
-            this.exit.FlatAppearance.BorderSize = 0;
-            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exit.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exit.Location = new System.Drawing.Point(763, 390);
-            this.exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.exit.Name = "exit";
-            this.exit.OnHoverBorderColor = System.Drawing.Color.WhiteSmoke;
-            this.exit.OnHoverButtonColor = System.Drawing.Color.DarkRed;
-            this.exit.OnHoverTextColor = System.Drawing.Color.White;
-            this.exit.Size = new System.Drawing.Size(135, 41);
-            this.exit.TabIndex = 15;
-            this.exit.Text = "Exit";
-            this.exit.TextColor = System.Drawing.Color.WhiteSmoke;
-            this.exit.UseVisualStyleBackColor = true;
-            this.exit.Click += new System.EventHandler(this.exit_Click);
+            this.ExitBtn.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.ExitBtn.ButtonColor = System.Drawing.Color.DimGray;
+            this.ExitBtn.FlatAppearance.BorderSize = 0;
+            this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitBtn.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitBtn.Location = new System.Drawing.Point(763, 390);
+            this.ExitBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.OnHoverBorderColor = System.Drawing.Color.WhiteSmoke;
+            this.ExitBtn.OnHoverButtonColor = System.Drawing.Color.DarkRed;
+            this.ExitBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.ExitBtn.Size = new System.Drawing.Size(135, 41);
+            this.ExitBtn.TabIndex = 15;
+            this.ExitBtn.Text = "Exit";
+            this.ExitBtn.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.ExitBtn.UseVisualStyleBackColor = true;
+            this.ExitBtn.Click += new System.EventHandler(this.exit_Click);
             // 
-            // manage
+            // manageBtn
             // 
-            this.manage.BorderColor = System.Drawing.Color.White;
-            this.manage.ButtonColor = System.Drawing.Color.DimGray;
-            this.manage.FlatAppearance.BorderSize = 0;
-            this.manage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.manage.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.manage.Location = new System.Drawing.Point(16, 385);
-            this.manage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.manage.Name = "manage";
-            this.manage.OnHoverBorderColor = System.Drawing.Color.White;
-            this.manage.OnHoverButtonColor = System.Drawing.Color.SteelBlue;
-            this.manage.OnHoverTextColor = System.Drawing.Color.White;
-            this.manage.Size = new System.Drawing.Size(135, 41);
-            this.manage.TabIndex = 13;
-            this.manage.Text = "Manage";
-            this.manage.TextColor = System.Drawing.Color.White;
-            this.manage.UseVisualStyleBackColor = true;
-            this.manage.Visible = false;
-            this.manage.Click += new System.EventHandler(this.manage_Click);
+            this.manageBtn.BorderColor = System.Drawing.Color.White;
+            this.manageBtn.ButtonColor = System.Drawing.Color.DimGray;
+            this.manageBtn.FlatAppearance.BorderSize = 0;
+            this.manageBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.manageBtn.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manageBtn.Location = new System.Drawing.Point(16, 385);
+            this.manageBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.manageBtn.Name = "manageBtn";
+            this.manageBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.manageBtn.OnHoverButtonColor = System.Drawing.Color.SteelBlue;
+            this.manageBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.manageBtn.Size = new System.Drawing.Size(135, 41);
+            this.manageBtn.TabIndex = 13;
+            this.manageBtn.Text = "Manage";
+            this.manageBtn.TextColor = System.Drawing.Color.White;
+            this.manageBtn.UseVisualStyleBackColor = true;
+            this.manageBtn.Visible = false;
+            this.manageBtn.Click += new System.EventHandler(this.manage_Click);
             // 
-            // LogOut
+            // LogOutBtn
             // 
-            this.LogOut.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.LogOut.ButtonColor = System.Drawing.Color.DimGray;
-            this.LogOut.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.LogOut.FlatAppearance.BorderSize = 0;
-            this.LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LogOut.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogOut.Location = new System.Drawing.Point(622, 390);
-            this.LogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.LogOut.Name = "LogOut";
-            this.LogOut.OnHoverBorderColor = System.Drawing.Color.WhiteSmoke;
-            this.LogOut.OnHoverButtonColor = System.Drawing.Color.Maroon;
-            this.LogOut.OnHoverTextColor = System.Drawing.Color.White;
-            this.LogOut.Size = new System.Drawing.Size(135, 41);
-            this.LogOut.TabIndex = 14;
-            this.LogOut.Text = "Log out";
-            this.LogOut.TextColor = System.Drawing.Color.WhiteSmoke;
-            this.LogOut.UseVisualStyleBackColor = true;
-            this.LogOut.Click += new System.EventHandler(this.LogOut_Click);
+            this.LogOutBtn.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.LogOutBtn.ButtonColor = System.Drawing.Color.DimGray;
+            this.LogOutBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.LogOutBtn.FlatAppearance.BorderSize = 0;
+            this.LogOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogOutBtn.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogOutBtn.Location = new System.Drawing.Point(622, 390);
+            this.LogOutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LogOutBtn.Name = "LogOutBtn";
+            this.LogOutBtn.OnHoverBorderColor = System.Drawing.Color.WhiteSmoke;
+            this.LogOutBtn.OnHoverButtonColor = System.Drawing.Color.Maroon;
+            this.LogOutBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.LogOutBtn.Size = new System.Drawing.Size(135, 41);
+            this.LogOutBtn.TabIndex = 14;
+            this.LogOutBtn.Text = "Log out";
+            this.LogOutBtn.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.LogOutBtn.UseVisualStyleBackColor = true;
+            this.LogOutBtn.Click += new System.EventHandler(this.LogOut_Click);
             // 
             // purchaseBtn
             // 
@@ -344,47 +344,47 @@ namespace Project
             this.purchaseBtn.UseVisualStyleBackColor = true;
             this.purchaseBtn.Click += new System.EventHandler(this.purchase_Click);
             // 
-            // confirm
+            // confirmBtn
             // 
-            this.confirm.BorderColor = System.Drawing.Color.White;
-            this.confirm.ButtonColor = System.Drawing.Color.DimGray;
-            this.confirm.FlatAppearance.BorderSize = 0;
-            this.confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.confirm.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirm.Location = new System.Drawing.Point(582, 98);
-            this.confirm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.confirm.Name = "confirm";
-            this.confirm.OnHoverBorderColor = System.Drawing.Color.White;
-            this.confirm.OnHoverButtonColor = System.Drawing.Color.MediumSeaGreen;
-            this.confirm.OnHoverTextColor = System.Drawing.Color.White;
-            this.confirm.Size = new System.Drawing.Size(193, 50);
-            this.confirm.TabIndex = 11;
-            this.confirm.Text = "Confirm";
-            this.confirm.TextColor = System.Drawing.Color.Snow;
-            this.confirm.UseVisualStyleBackColor = true;
-            this.confirm.Visible = false;
-            this.confirm.Click += new System.EventHandler(this.confirm_Click);
+            this.confirmBtn.BorderColor = System.Drawing.Color.White;
+            this.confirmBtn.ButtonColor = System.Drawing.Color.DimGray;
+            this.confirmBtn.FlatAppearance.BorderSize = 0;
+            this.confirmBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.confirmBtn.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmBtn.Location = new System.Drawing.Point(582, 98);
+            this.confirmBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.confirmBtn.Name = "confirmBtn";
+            this.confirmBtn.OnHoverBorderColor = System.Drawing.Color.White;
+            this.confirmBtn.OnHoverButtonColor = System.Drawing.Color.MediumSeaGreen;
+            this.confirmBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.confirmBtn.Size = new System.Drawing.Size(193, 50);
+            this.confirmBtn.TabIndex = 11;
+            this.confirmBtn.Text = "Confirm";
+            this.confirmBtn.TextColor = System.Drawing.Color.Snow;
+            this.confirmBtn.UseVisualStyleBackColor = true;
+            this.confirmBtn.Visible = false;
+            this.confirmBtn.Click += new System.EventHandler(this.confirm_Click);
             // 
-            // cancel
+            // cancelBtn
             // 
-            this.cancel.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.cancel.ButtonColor = System.Drawing.Color.DimGray;
-            this.cancel.FlatAppearance.BorderSize = 0;
-            this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancel.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancel.Location = new System.Drawing.Point(582, 175);
-            this.cancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cancel.Name = "cancel";
-            this.cancel.OnHoverBorderColor = System.Drawing.Color.WhiteSmoke;
-            this.cancel.OnHoverButtonColor = System.Drawing.Color.DarkRed;
-            this.cancel.OnHoverTextColor = System.Drawing.Color.White;
-            this.cancel.Size = new System.Drawing.Size(193, 50);
-            this.cancel.TabIndex = 12;
-            this.cancel.Text = "Cancel";
-            this.cancel.TextColor = System.Drawing.Color.WhiteSmoke;
-            this.cancel.UseVisualStyleBackColor = true;
-            this.cancel.Visible = false;
-            this.cancel.Click += new System.EventHandler(this.cancel_Click);
+            this.cancelBtn.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.cancelBtn.ButtonColor = System.Drawing.Color.DimGray;
+            this.cancelBtn.FlatAppearance.BorderSize = 0;
+            this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelBtn.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelBtn.Location = new System.Drawing.Point(582, 175);
+            this.cancelBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.OnHoverBorderColor = System.Drawing.Color.WhiteSmoke;
+            this.cancelBtn.OnHoverButtonColor = System.Drawing.Color.DarkRed;
+            this.cancelBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.cancelBtn.Size = new System.Drawing.Size(193, 50);
+            this.cancelBtn.TabIndex = 12;
+            this.cancelBtn.Text = "Cancel";
+            this.cancelBtn.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Visible = false;
+            this.cancelBtn.Click += new System.EventHandler(this.cancel_Click);
             // 
             // AirBag_check
             // 
@@ -453,11 +453,11 @@ namespace Project
             // 
             // carshop
             // 
-            this.AcceptButton = this.confirm;
+            this.AcceptButton = this.confirmBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.CancelButton = this.LogOut;
+            this.CancelButton = this.LogOutBtn;
             this.ClientSize = new System.Drawing.Size(914, 442);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Rear_check);
@@ -466,23 +466,23 @@ namespace Project
             this.Controls.Add(this.ABS_check);
             this.Controls.Add(this.AirBag_check);
             this.Controls.Add(this.rentBtn);
-            this.Controls.Add(this.exit);
-            this.Controls.Add(this.price);
-            this.Controls.Add(this.manage);
-            this.Controls.Add(this.LogOut);
-            this.Controls.Add(this.transmission);
-            this.Controls.Add(this.year);
-            this.Controls.Add(this.model);
-            this.Controls.Add(this.brand);
+            this.Controls.Add(this.ExitBtn);
+            this.Controls.Add(this.priceLbl);
+            this.Controls.Add(this.manageBtn);
+            this.Controls.Add(this.LogOutBtn);
+            this.Controls.Add(this.transmissionCombo);
+            this.Controls.Add(this.yearCombo);
+            this.Controls.Add(this.modelCombo);
+            this.Controls.Add(this.brandCombo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.name);
+            this.Controls.Add(this.nameLbl);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.purchaseBtn);
-            this.Controls.Add(this.confirm);
-            this.Controls.Add(this.cancel);
+            this.Controls.Add(this.confirmBtn);
+            this.Controls.Add(this.cancelBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "carshop";
@@ -501,31 +501,31 @@ namespace Project
 
         #endregion
 
-        private System.Windows.Forms.Label name;
+        private System.Windows.Forms.Label nameLbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox brand;
-        private System.Windows.Forms.ComboBox model;
-        private System.Windows.Forms.ComboBox year;
-        private System.Windows.Forms.ComboBox transmission;
+        private System.Windows.Forms.ComboBox brandCombo;
+        private System.Windows.Forms.ComboBox modelCombo;
+        private System.Windows.Forms.ComboBox yearCombo;
+        private System.Windows.Forms.ComboBox transmissionCombo;
         private ePOSOne.btnProduct.Button_WOC purchaseBtn;
         private ePOSOne.btnProduct.Button_WOC rent;
-        private ePOSOne.btnProduct.Button_WOC LogOut;
-        private ePOSOne.btnProduct.Button_WOC manage;
-        private System.Windows.Forms.Label price;
+        private ePOSOne.btnProduct.Button_WOC LogOutBtn;
+        private ePOSOne.btnProduct.Button_WOC manageBtn;
+        private System.Windows.Forms.Label priceLbl;
         private DataSet dataSet;
         private System.Windows.Forms.BindingSource accountsBindingSource;
         private DataSetTableAdapters.AccountsTableAdapter accountsTableAdapter;
         private DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private ePOSOne.btnProduct.Button_WOC exit;
+        private ePOSOne.btnProduct.Button_WOC ExitBtn;
         private System.Windows.Forms.BindingSource carsBindingSource;
         private DataSetTableAdapters.CarsTableAdapter carsTableAdapter;
         private ePOSOne.btnProduct.Button_WOC rentBtn;
-        private ePOSOne.btnProduct.Button_WOC confirm;
-        private ePOSOne.btnProduct.Button_WOC cancel;
+        private ePOSOne.btnProduct.Button_WOC confirmBtn;
+        private ePOSOne.btnProduct.Button_WOC cancelBtn;
         private System.Windows.Forms.CheckBox AirBag_check;
         private System.Windows.Forms.CheckBox ABS_check;
         private System.Windows.Forms.CheckBox GPS_check;

@@ -39,22 +39,22 @@ namespace Project
         private void carshop_Load(object sender, EventArgs e)
         {
             this.AcceptButton = purchaseBtn;
-            this.CancelButton = LogOut;
+            this.CancelButton = LogOutBtn;
             for (int i = 0; i < carsTableAdapter.GetData().Count; i++)
             {
-                if (!brand.Items.Contains(carsTableAdapter.GetData()[i][1]))
+                if (!brandCombo.Items.Contains(carsTableAdapter.GetData()[i][1]))
                 {
-                    brand.Items.Add(carsTableAdapter.GetData()[i][1]);
+                    brandCombo.Items.Add(carsTableAdapter.GetData()[i][1]);
                 }
             }
             
             
 
-            name.Text = accountsTableAdapter.getName(SignIn.userName);
+            nameLbl.Text = accountsTableAdapter.getName(SignIn.userName);
             bool admin = (bool)accountsTableAdapter.checkAdmin(SignIn.userName);
             if(admin) //Checks if the user is an admin or not
             {
-                manage.Visible = true; //Show the button manage to Admin
+                manageBtn.Visible = true; //Show the button manage to Admin
             }
         }
 
@@ -76,33 +76,33 @@ namespace Project
             MessageBox.Show("Congratulations! Your car has been booked.");
 
             this.AcceptButton = purchaseBtn;
-            this.CancelButton = LogOut;
+            this.CancelButton = LogOutBtn;
             purchaseBtn.Visible = true;
             rentBtn.Visible = true;
-            confirm.Visible = false;
-            price.Visible = false;
+            confirmBtn.Visible = false;
+            priceLbl.Visible = false;
             carsTableAdapter.UpdateStock(id);
         }
 
         private void cancel_Click(object sender, EventArgs e)
         {
             this.AcceptButton = purchaseBtn;
-            this.CancelButton = LogOut;
+            this.CancelButton = LogOutBtn;
             purchaseBtn.Visible = true;
             rentBtn.Visible = true;
-            confirm.Visible = false;
-            cancel.Visible = false;
-            price.Visible = false;
+            confirmBtn.Visible = false;
+            cancelBtn.Visible = false;
+            priceLbl.Visible = false;
         }
 
         private void brand_SelectedIndexChanged(object sender, EventArgs e) 
         {
-            model.Items.Clear();
+            modelCombo.Items.Clear();
             //Fills models combobox items based on selected brand
-            for (int i = 0; i < carsTableAdapter.GetByBrand(brand.Text).Count; i++)
+            for (int i = 0; i < carsTableAdapter.GetByBrand(brandCombo.Text).Count; i++)
 
             {
-                model.Items.Add(carsTableAdapter.GetByBrand(brand.Text)[i][2]);
+                modelCombo.Items.Add(carsTableAdapter.GetByBrand(brandCombo.Text)[i][2]);
             }
             
         }
@@ -118,8 +118,8 @@ namespace Project
             try //Changes the price in some of cases
             {
                 Price = (decimal)carsTableAdapter.GetPrice(id);
-                Price -= ((decimal)0.01 * Price) * (2021 - decimal.Parse(year.Text));
-                if (transmission.SelectedIndex == 1)
+                Price -= ((decimal)0.01 * Price) * (2021 - decimal.Parse(yearCombo.Text));
+                if (transmissionCombo.SelectedIndex == 1)
                 {
                     Price -= ((decimal)0.02 * Price);
                 }
@@ -143,15 +143,15 @@ namespace Project
                 {
                     Price += AirBag.Price;
                 }
-                price.Text = "Total Price: " + Price.ToString("c");
-                price.ForeColor = Color.SpringGreen;
-                this.AcceptButton = confirm;
-                this.CancelButton = cancel;
+                priceLbl.Text = "Total Price: " + Price.ToString("c");
+                priceLbl.ForeColor = Color.SpringGreen;
+                this.AcceptButton = confirmBtn;
+                this.CancelButton = cancelBtn;
                 purchaseBtn.Visible = false;
                 rentBtn.Visible = false;
-                confirm.Visible = true;
-                cancel.Visible = true;
-                price.Visible = true;
+                confirmBtn.Visible = true;
+                cancelBtn.Visible = true;
+                priceLbl.Visible = true;
             }
             catch { }
         }
@@ -161,27 +161,27 @@ namespace Project
             try
             {
                 Rent = (decimal)carsTableAdapter.getRent(id);
-                Rent -= ((decimal)0.01 * Rent) * (2021 - decimal.Parse(year.Text));
-                if (transmission.SelectedIndex == 1)
+                Rent -= ((decimal)0.01 * Rent) * (2021 - decimal.Parse(yearCombo.Text));
+                if (transmissionCombo.SelectedIndex == 1)
                 {
                     Rent -= ((decimal)0.01 * Rent);
                 }
-                price.Text = "Rent Price: " + Rent.ToString("c") + "/day";
-                price.ForeColor = Color.SandyBrown;
-                this.AcceptButton = confirm;
-                this.CancelButton = cancel;
+                priceLbl.Text = "Rent Price: " + Rent.ToString("c") + "/day";
+                priceLbl.ForeColor = Color.SandyBrown;
+                this.AcceptButton = confirmBtn;
+                this.CancelButton = cancelBtn;
                 purchaseBtn.Visible = false;
                 rentBtn.Visible = false;
-                confirm.Visible = true;
-                cancel.Visible = true;
-                price.Visible = true;
+                confirmBtn.Visible = true;
+                cancelBtn.Visible = true;
+                priceLbl.Visible = true;
             }
             catch { }
         }
 
         private void model_SelectedIndexChanged(object sender, EventArgs e)
         {
-            id = (int)carsTableAdapter.getId(brand.Text, model.Text);
+            id = (int)carsTableAdapter.getId(brandCombo.Text, modelCombo.Text);
             Price = (decimal)carsTableAdapter.GetPrice(id);
             Rent = (decimal)carsTableAdapter.getRent(id);
         }

@@ -30,17 +30,17 @@ namespace Project
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.cancel = new ePOSOne.btnProduct.Button_WOC();
+            this.cancelBtn = new ePOSOne.btnProduct.Button_WOC();
             this.signUpBtn = new ePOSOne.btnProduct.Button_WOC();
             this.showPassword = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.password = new System.Windows.Forms.TextBox();
-            this.username = new System.Windows.Forms.TextBox();
+            this.TxtPassword = new System.Windows.Forms.TextBox();
+            this.TxtUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.name = new System.Windows.Forms.TextBox();
+            this.TxtName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.confirm = new System.Windows.Forms.TextBox();
+            this.TxtConfirm = new System.Windows.Forms.TextBox();
             this.dataSet = new Project.DataSet();
             this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.accountsTableAdapter = new Project.DataSetTableAdapters.AccountsTableAdapter();
@@ -51,25 +51,25 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // cancel
+            // cancelBtn
             // 
-            this.cancel.BorderColor = System.Drawing.Color.Transparent;
-            this.cancel.ButtonColor = System.Drawing.Color.Red;
-            this.cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancel.FlatAppearance.BorderSize = 0;
-            this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancel.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancel.Location = new System.Drawing.Point(141, 512);
-            this.cancel.Name = "cancel";
-            this.cancel.OnHoverBorderColor = System.Drawing.Color.Red;
-            this.cancel.OnHoverButtonColor = System.Drawing.Color.MintCream;
-            this.cancel.OnHoverTextColor = System.Drawing.Color.Red;
-            this.cancel.Size = new System.Drawing.Size(117, 41);
-            this.cancel.TabIndex = 7;
-            this.cancel.Text = "Cancel";
-            this.cancel.TextColor = System.Drawing.Color.White;
-            this.cancel.UseVisualStyleBackColor = true;
-            this.cancel.Click += new System.EventHandler(this.cancel_Click);
+            this.cancelBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.cancelBtn.ButtonColor = System.Drawing.Color.Red;
+            this.cancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.cancelBtn.FlatAppearance.BorderSize = 0;
+            this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelBtn.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelBtn.Location = new System.Drawing.Point(141, 512);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.OnHoverBorderColor = System.Drawing.Color.Red;
+            this.cancelBtn.OnHoverButtonColor = System.Drawing.Color.MintCream;
+            this.cancelBtn.OnHoverTextColor = System.Drawing.Color.Red;
+            this.cancelBtn.Size = new System.Drawing.Size(117, 41);
+            this.cancelBtn.TabIndex = 7;
+            this.cancelBtn.Text = "Cancel";
+            this.cancelBtn.TextColor = System.Drawing.Color.White;
+            this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancel_Click);
             // 
             // signUpBtn
             // 
@@ -125,21 +125,21 @@ namespace Project
             this.label4.TabIndex = 13;
             this.label4.Text = "Username";
             // 
-            // password
+            // TxtPassword
             // 
-            this.password.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password.Location = new System.Drawing.Point(39, 314);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(327, 26);
-            this.password.TabIndex = 3;
+            this.TxtPassword.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPassword.Location = new System.Drawing.Point(39, 314);
+            this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.Size = new System.Drawing.Size(327, 26);
+            this.TxtPassword.TabIndex = 3;
             // 
-            // username
+            // TxtUsername
             // 
-            this.username.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.Location = new System.Drawing.Point(38, 250);
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(327, 26);
-            this.username.TabIndex = 1;
+            this.TxtUsername.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUsername.Location = new System.Drawing.Point(38, 250);
+            this.TxtUsername.Name = "TxtUsername";
+            this.TxtUsername.Size = new System.Drawing.Size(327, 26);
+            this.TxtUsername.TabIndex = 1;
             // 
             // label1
             // 
@@ -152,13 +152,13 @@ namespace Project
             this.label1.TabIndex = 21;
             this.label1.Text = "Name";
             // 
-            // name
+            // TxtName
             // 
-            this.name.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name.Location = new System.Drawing.Point(38, 187);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(327, 26);
-            this.name.TabIndex = 0;
+            this.TxtName.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtName.Location = new System.Drawing.Point(38, 187);
+            this.TxtName.Name = "TxtName";
+            this.TxtName.Size = new System.Drawing.Size(327, 26);
+            this.TxtName.TabIndex = 0;
             // 
             // label3
             // 
@@ -171,13 +171,13 @@ namespace Project
             this.label3.TabIndex = 24;
             this.label3.Text = "Confirm Password";
             // 
-            // confirm
+            // TxtConfirm
             // 
-            this.confirm.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirm.Location = new System.Drawing.Point(39, 377);
-            this.confirm.Name = "confirm";
-            this.confirm.Size = new System.Drawing.Size(327, 26);
-            this.confirm.TabIndex = 4;
+            this.TxtConfirm.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtConfirm.Location = new System.Drawing.Point(39, 377);
+            this.TxtConfirm.Name = "TxtConfirm";
+            this.TxtConfirm.Size = new System.Drawing.Size(327, 26);
+            this.TxtConfirm.TabIndex = 4;
             // 
             // dataSet
             // 
@@ -216,19 +216,19 @@ namespace Project
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.CancelButton = this.cancel;
+            this.CancelButton = this.cancelBtn;
             this.ClientSize = new System.Drawing.Size(430, 559);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.confirm);
+            this.Controls.Add(this.TxtConfirm);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.name);
-            this.Controls.Add(this.cancel);
+            this.Controls.Add(this.TxtName);
+            this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.signUpBtn);
             this.Controls.Add(this.showPassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.password);
-            this.Controls.Add(this.username);
+            this.Controls.Add(this.TxtPassword);
+            this.Controls.Add(this.TxtUsername);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SignUp";
@@ -243,17 +243,17 @@ namespace Project
 
         #endregion
 
-        private ePOSOne.btnProduct.Button_WOC cancel;
+        private ePOSOne.btnProduct.Button_WOC cancelBtn;
         private ePOSOne.btnProduct.Button_WOC signUpBtn;
         private System.Windows.Forms.CheckBox showPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox password;
-        private System.Windows.Forms.TextBox username;
+        private System.Windows.Forms.TextBox TxtPassword;
+        private System.Windows.Forms.TextBox TxtUsername;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox name;
+        private System.Windows.Forms.TextBox TxtName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox confirm;
+        private System.Windows.Forms.TextBox TxtConfirm;
         private DataSet dataSet;
         private System.Windows.Forms.BindingSource accountsBindingSource;
         private DataSetTableAdapters.AccountsTableAdapter accountsTableAdapter;

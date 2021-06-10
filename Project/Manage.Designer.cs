@@ -31,7 +31,7 @@ namespace Project
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manage));
-            this.name = new System.Windows.Forms.Label();
+            this.nameLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.accountsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
@@ -57,8 +57,8 @@ namespace Project
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.carsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.userSearch = new System.Windows.Forms.TextBox();
-            this.carSearch = new System.Windows.Forms.TextBox();
+            this.TxtuserSearch = new System.Windows.Forms.TextBox();
+            this.TxtcarSearch = new System.Windows.Forms.TextBox();
             this.userSearchBtn = new System.Windows.Forms.Button();
             this.exit = new ePOSOne.btnProduct.Button_WOC();
             this.back = new ePOSOne.btnProduct.Button_WOC();
@@ -94,16 +94,16 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // name
+            // nameLbl
             // 
-            this.name.AutoSize = true;
-            this.name.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.name.Location = new System.Drawing.Point(63, 19);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(64, 24);
-            this.name.TabIndex = 26;
-            this.name.Text = "NAME";
+            this.nameLbl.AutoSize = true;
+            this.nameLbl.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.nameLbl.Location = new System.Drawing.Point(63, 19);
+            this.nameLbl.Name = "nameLbl";
+            this.nameLbl.Size = new System.Drawing.Size(64, 24);
+            this.nameLbl.TabIndex = 26;
+            this.nameLbl.Text = "NAME";
             // 
             // label1
             // 
@@ -341,25 +341,25 @@ namespace Project
             this.carsBindingSource.DataMember = "Cars";
             this.carsBindingSource.DataSource = this.dataSet;
             // 
-            // userSearch
+            // TxtuserSearch
             // 
-            this.userSearch.BackColor = System.Drawing.Color.DimGray;
-            this.userSearch.ForeColor = System.Drawing.SystemColors.Control;
-            this.userSearch.Location = new System.Drawing.Point(789, 110);
-            this.userSearch.Name = "userSearch";
-            this.userSearch.Size = new System.Drawing.Size(234, 22);
-            this.userSearch.TabIndex = 2;
-            this.userSearch.TextChanged += new System.EventHandler(this.userSearch_TextChanged);
+            this.TxtuserSearch.BackColor = System.Drawing.Color.DimGray;
+            this.TxtuserSearch.ForeColor = System.Drawing.SystemColors.Control;
+            this.TxtuserSearch.Location = new System.Drawing.Point(789, 110);
+            this.TxtuserSearch.Name = "TxtuserSearch";
+            this.TxtuserSearch.Size = new System.Drawing.Size(234, 22);
+            this.TxtuserSearch.TabIndex = 2;
+            this.TxtuserSearch.TextChanged += new System.EventHandler(this.userSearch_TextChanged);
             // 
-            // carSearch
+            // TxtcarSearch
             // 
-            this.carSearch.BackColor = System.Drawing.Color.DimGray;
-            this.carSearch.ForeColor = System.Drawing.SystemColors.Control;
-            this.carSearch.Location = new System.Drawing.Point(383, 109);
-            this.carSearch.Name = "carSearch";
-            this.carSearch.Size = new System.Drawing.Size(241, 22);
-            this.carSearch.TabIndex = 0;
-            this.carSearch.TextChanged += new System.EventHandler(this.carSearch_TextChanged);
+            this.TxtcarSearch.BackColor = System.Drawing.Color.DimGray;
+            this.TxtcarSearch.ForeColor = System.Drawing.SystemColors.Control;
+            this.TxtcarSearch.Location = new System.Drawing.Point(383, 109);
+            this.TxtcarSearch.Name = "TxtcarSearch";
+            this.TxtcarSearch.Size = new System.Drawing.Size(241, 22);
+            this.TxtcarSearch.TabIndex = 0;
+            this.TxtcarSearch.TextChanged += new System.EventHandler(this.carSearch_TextChanged);
             // 
             // userSearchBtn
             // 
@@ -600,14 +600,14 @@ namespace Project
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.carSearchBtn);
             this.Controls.Add(this.userSearchBtn);
-            this.Controls.Add(this.carSearch);
-            this.Controls.Add(this.userSearch);
+            this.Controls.Add(this.TxtcarSearch);
+            this.Controls.Add(this.TxtuserSearch);
             this.Controls.Add(this.carsDataGridView);
             this.Controls.Add(this.accountsDataGridView);
             this.Controls.Add(this.accountsBindingNavigator);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.name);
+            this.Controls.Add(this.nameLbl);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.back);
@@ -638,7 +638,7 @@ namespace Project
         #endregion
         private ePOSOne.btnProduct.Button_WOC back;
         private ePOSOne.btnProduct.Button_WOC exit;
-        private System.Windows.Forms.Label name;
+        private System.Windows.Forms.Label nameLbl;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -663,8 +663,8 @@ namespace Project
         private System.Windows.Forms.DataGridView carsDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.TextBox userSearch;
-        private System.Windows.Forms.TextBox carSearch;
+        private System.Windows.Forms.TextBox TxtuserSearch;
+        private System.Windows.Forms.TextBox TxtcarSearch;
         private System.Windows.Forms.Button userSearchBtn;
         private System.Windows.Forms.Button carSearchBtn;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;

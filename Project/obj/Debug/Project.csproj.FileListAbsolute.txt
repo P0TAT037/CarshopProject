@@ -75,3 +75,16 @@ C:\Users\lolor\Source\Repos\ProjectIII\Project\obj\Debug\Project.csproj.CoreComp
 C:\Users\lolor\Source\Repos\ProjectIII\Project\obj\Debug\Project.exe
 C:\Users\lolor\Source\Repos\ProjectIII\Project\obj\Debug\Project.pdb
 C:\Users\lolor\source\repos\ProjectIII\Project\obj\Debug\Project.csproj.AssemblyReference.cache
+C:\Users\lolor\source\repos\Car Dealership\Project\bin\Debug\Project.exe.config
+C:\Users\lolor\source\repos\Car Dealership\Project\bin\Debug\Project.exe
+C:\Users\lolor\source\repos\Car Dealership\Project\bin\Debug\Project.pdb
+C:\Users\lolor\source\repos\Car Dealership\Project\obj\Debug\Project.csproj.AssemblyReference.cache
+C:\Users\lolor\source\repos\Car Dealership\Project\obj\Debug\Project.carshop.resources
+C:\Users\lolor\source\repos\Car Dealership\Project\obj\Debug\Project.Manage.resources
+C:\Users\lolor\source\repos\Car Dealership\Project\obj\Debug\Project.SignIn.resources
+C:\Users\lolor\source\repos\Car Dealership\Project\obj\Debug\Project.Properties.Resources.resources
+C:\Users\lolor\source\repos\Car Dealership\Project\obj\Debug\Project.SignUp.resources
+C:\Users\lolor\source\repos\Car Dealership\Project\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Users\lolor\source\repos\Car Dealership\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Users\lolor\source\repos\Car Dealership\Project\obj\Debug\Project.exe
+C:\Users\lolor\source\repos\Car Dealership\Project\obj\Debug\Project.pdb

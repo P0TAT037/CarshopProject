@@ -18,7 +18,7 @@ namespace Project
         public SignIn()
         {
             InitializeComponent();
-            password.UseSystemPasswordChar = true;
+            TxtPassword.UseSystemPasswordChar = true;
         }
 
         
@@ -26,11 +26,11 @@ namespace Project
         {
             if (showPassword.Checked) //Hides the password 
             {
-                password.UseSystemPasswordChar = false;
+                TxtPassword.UseSystemPasswordChar = false;
             }
             else
             {
-                password.UseSystemPasswordChar = true;
+                TxtPassword.UseSystemPasswordChar = true;
             }
 
         }
@@ -54,8 +54,8 @@ namespace Project
         
         private void signInBtn_Click(object sender, EventArgs e)
         {
-            userName = username.Text;
-            if(accountsTableAdapter.getPassword(userName) == password.Text)
+            userName = TxtUsername.Text;
+            if(accountsTableAdapter.getPassword(userName) == TxtPassword.Text)
             {
                 carshop carshop = new carshop();
                 carshop.Show();
@@ -80,8 +80,6 @@ namespace Project
             this.tableAdapterManager.UpdateAll(this.dataSet);
 
         }
-
-        
     }
 
 }
